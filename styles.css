@@ -1,0 +1,46 @@
+body {
+	font-family: Futura, Helvetica, Arial, sans-serif; 
+	line-height: 1.5;
+	letter-spacing: 1px;
+	background-color: #CEF2EA;;
+	color: #333;
+}
+
+p {
+	font-family: monospace;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	transition: all 1s;
+}
+.text-center {
+	text-align: center;
+}
+
+section {
+	background-color: #fafafa;
+	margin: 50px 10px;
+	padding: 15px;
+	border: 1px solid black;
+	    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+	/*border-bottom: 1px solid black;*/
+	cursor: pointer;
+}
+
+/*code {
+	background-color: #e2e2e2;
+	padding: 2px;
+}*/
+pre {
+	background-color: #e2e2e2;
+	padding: 2px;
+}
+
+.hide {
+	display: none;
+}

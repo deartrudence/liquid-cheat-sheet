@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Liquid Cheat Sheet</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="solarized-light.css">
+	<script src="rainbow.min.js"></script>
+	<script src="generic.js"></script>
+</head>
+<body>
+<div class="container">
+	<section class="header text-center">
+		<h1>🍍 Liquid Cheat Sheet 🍍</h1>
+		<div class="content">
+			<p>Liquid is an open-source template language created by Shopify and written in Ruby. It is the backbone of Shopify themes and is used to load dynamic content on storefronts.</p>
+		</div>
+		
+	</section>
+
+	<section class="objects">
+		<h2 class="subtitle">Template Variables</h2>
+		<div class="content hide">
+			<p>Shopify objects that contain attributes that can be dynamically put on the page. For example, the product object contains an attribute called title that can be used to output the title of a product.</p>
+
+			<p>The <strong>handle</strong> is used to access the attributes of a Liquid object. By default, it is the object’s title in lowercase with any spaces and special characters replaced by hyphens (-). Every object in Liquid (product, collection, blog, menu) has a handle.</p>
+
+			<h4 class="subtitle">Article</h4>
+			<div class="content hide">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At modi, laudantium, fugiat mollitia soluta laboriosam! Facere porro possimus reiciendis est veniam nemo ipsam fugit, in!</p>
+			</div>
+			<h4>Blog</h4>
+			<h4>Cart</h4>
+			<h4>Collection</h4>
+			<h4>Customer</h4>
+			<h4>Images</h4>
+			<h4>Linklist</h4>
+			<h4>Pages</h4>
+			<h4>Product</h4>
+			<h4>Shop</h4>
+		</div>
+		
+	</section>
+
+	<section class="tags">
+		<h2 class="subtitle">Liquid Tags</h2>
+		<div class="content hide">
+			<p>There are two types of tags; <strong>Output Statment Tags</strong> are used to display information on the page and uses <code>{{ }}</code> and <strong>Logic statment Tags</strong> are used to perform logic and uses <code>{% %}</code></p>
+			<p>The following tags are logic based and therefore normally use <code>{% %}</code></p>
+			<h4 class="subtitle">Variable Tags</h4>
+			<div class="content hide">
+				<h5 class="subtitle">assign</h5>
+				<div class="content hide">
+					<p>Creates a new variable</p>
+<pre>
+<code data-language="html">
+{% assign var-name = 'elephant' %}
+{{ var-name }}
+
+returns
+
+elephant
+</code>
+</pre>	
+				<hr>
+				</div>
+				<h5 class="subtitle">capture</h5>
+					<div class="content hide">
+						<p>Captures the string inside of the opening and closing tags and assigns it to a variable. Variables created through {% capture %} are strings. This is very useful for capturing information that's being looped over.</p>
+<pre>
+<code data-language="html">
+{% capture item_list %}
+  {% for item in cart.items %}
+      {{ item.product.title }}
+  {% endfor %}
+{% endcapture %}
+
+returns
+
+item1 item2 item3
+</code>
+</pre>
+						<p>assuming those are the items in your cart.</p>
+						<hr>
+					</div>
+				<h5 class="subtitle">increment</h5>
+					<div class="content hide">
+						<p>increment sets the variable to 0, then every time it is called after, it increments the variable by 1. It works independently of variables created using the assign or capture keywords even if they have the same name.</p>
+<pre>
+<code data-language="html">
+{% increment counter %}
+{% increment counter %}
+{% increment counter %}
+
+{{ counter }}
+
+returns 
+
+0
+1
+2
+
+2
+</code>
+</pre>	
+					<hr>
+					</div>
+				<h5 class="subtitle">decrement</h5>
+				<div class="content hide">
+					<p>decrement sets the variable to 0, then every time it is called after, it decrements the variable by 1. It works independently of variables created using the assign or capture keywords even if they have the same name.</p>
+<pre>
+<code data-language="html">
+{% decrement counter %}
+{% decrement counter %}
+{% decrement counter %}
+
+{{ counter }}
+
+returns 
+
+- 1
+- 2
+- 3
+
+- 3
+</code>
+</pre>
+				<hr>
+				</div>
+			</div>
+			<h4 class="subtitle">Iteration Tags</h4>
+			<div class="content hide">
+				<h5 class="subtitle">for</h5>
+				<div class="content hide">
+					<p>Repeatedly executes a block of code.</p>
+<pre>
+<code data-language="html">{% for product in collection.products %}
+  {{ product.title }}
+{% endfor %}
+</code></pre>
+					<p>for loops can output a maximum of 50 results per page. In cases where there are more than 50 results, use the paginate tag to split them across multiple pages.</p>
+					<hr>
+				</div>
+				<h5 class="subtitle">cycle</h5>
+				<div class="content hide">
+					<p>Loops through a group of strings and outputs them in the order that they were passed as parameters. Each time cycle is called, the next string that was passed as a parameter is output. In this example we're using it to add the class of last to every fourth div.</p>
+<pre>
+<code data-language="html">
+<div class="left {% cycle '','','','last' %}">
+  <img src="{{ product.featured_image.src | product_img_url: 'medium' }}" />
+</div>
+
+returns
+
+<div class="left"></div>
+<div class="left"></div>
+<div class="left"></div>
+<div class="left last"></div>
+<div class="left"></div>
+<div class="left"></div>
+<div class="left"></div>
+<div class="left last"></div>
+</code>
+</pre>	
+				<hr>
+				</div>
+				<h5 class="subtitle">tablerow</h5>
+				<div class="content hide">
+					<p>Generates an HTML . Must be wrapped in an opening and closing HTML tags.</p>
+<pre>
+<code data-language="html">
+<table>
+{% tablerow product in collection.products %}
+  {{ product.title }}
+{% endtablerow %}
+</table>
+
+returns
+
+<table>
+    <tr class="row1">
+        <td class="col1">
+            the blue book
+        </td>
+        <td class="col2">
+            the red book
+        </td>
+        <td class="col3">
+            the yellow book
+        </td>
+    </tr>
+</table>
+</code>
+</pre>
+					<p>You can add the 'cols' parameter to affect how many there are in a row</p>
+<pre>
+<code data-language="html">
+{% tablerow product in collection.products cols:2 %}
+  {{ product.title }}
+{% endtablerow %}
+
+returns
+
+<table>
+    <tr class="row1">
+        <td class="col1">
+            the blue book
+        </td>
+        <td class="col2">
+            the red book
+        </td>
+    </tr>
+    <tr class="row2">
+        <td class="col1">
+            the yellow book
+        </td>
+    </tr>
+</table>
+</code>
+</pre>
+				<hr>
+				</div>
+			</div>
+			<h4 class="subtitle">Control Flow Tags</h4>
+			<div class="content hide">
+				<h5 class="subtitle">if</h5>
+				<h5 class="subtitle">unless</h5>
+				<h5 class="subtitle">case</h5>
+			</div>
+			<h4 class="subtitle">Theme Tags</h4>
+			<div class="content hide">
+				<h5 class="subtitle">comment</h5>
+				<h5 class="subtitle">include</h5>
+				<h5 class="subtitle">form</h5>
+				<h5 class="subtitle">layout</h5>
+				<h5 class="subtitle">paginate</h5>
+				<h5 class="subtitle">raw</h5>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="filters">
+		<h2 class="subtitle">Liquid Filters</h2>
+		<div class="content hide">
+			<h4 class="subtitle">Array Filters</h4>
+			<div class="content hide">
+				<h5 class="subtitle">Join</h5>
+				<h5 class="subtitle">First</h5>
+				<h5 class="subtitle">Last</h5>
+				<h5 class="subtitle">Concat</h5>
+				<h5 class="subtitle">Index</h5>
+				<h5 class="subtitle">Map</h5>
+				<h5 class="subtitle">Reverse</h5>
+				<h5 class="subtitle">Size</h5>
+				<h5 class="subtitle">Sort</h5>
+				<h5 class="subtitle">Uniq</h5>
+			</div>
+			<h4 class="subtitle">HTML Filters</h4>
+			<div class="content hide">
+				<h5 class="subtitle">image_tag</h5>
+				<h5 class="subtitle">script_tag</h5>
+				<h5 class="subtitle">stylesheet_tag</h5>
+			</div>
+			<h4 class="subtitle">Math Filters</h4>
+			<div class="content hide">
+				<h5 class="subtitle">abs</h5>
+				<h5 class="subtitle">ceil</h5>
+				<h5 class="subtitle">divided_by</h5>
+				<h5 class="subtitle">floor</h5>
+				<h5 class="subtitle">minus</h5>
+				<h5 class="subtitle">plus</h5>
+				<h5 class="subtitle">round</h5>
+				<h5 class="subtitle">times</h5>
+				<h5 class="subtitle">modulo</h5>
+			</div>
+			<h4 class="subtitle">Money Filters</h4>
+			<div class="content hide">
+				<h5 class="subtitle">money</h5>
+				<h5 class="subtitle">money_with_currency</h5>
+				<h5 class="subtitle">money_without_trailing_zeros</h5>
+				<h5 class="subtitle">money_without_currency class="subtitle"</h5>
+			</div>
+			<h4 class="subtitle">String Filters</h4>
+			<div class="content hide">
+				<h5 class="subtitle">append</h5>
+				<h5 class="subtitle">camelcase</h5>
+				<h5 class="subtitle">capitalize</h5>
+				<h5 class="subtitle">downcase</h5>
+				<h5 class="subtitle">escape</h5>
+				<h5 class="subtitle">handle/handleize</h5>
+				<h5 class="subtitle">newline_to_br</h5>
+				<h5 class="subtitle">pluralize</h5>
+				<h5 class="subtitle">prepend</h5>
+				<h5 class="subtitle">remove</h5>
+				<h5 class="subtitle">remove_first</h5>
+				<h5 class="subtitle">replace</h5>
+				<h5 class="subtitle">replace_first</h5>
+				<h5 class="subtitle">slice</h5>
+				<h5 class="subtitle">strip</h5>
+				<h5 class="subtitle">lstrip</h5>
+				<h5 class="subtitle">rstrip</h5>
+				<h5 class="subtitle">strip_newlines</h5>
+				<h5 class="subtitle">truncate</h5>
+				<h5 class="subtitle">truncatewords</h5>
+				<h5 class="subtitle">upcase</h5>
+				<h5 class="subtitle">url_encode</h5>
+				<h5 class="subtitle">url_escape</h5>
+				<h5 class="subtitle">url_param_escape</h5>
+				<h5 class="subtitle">reverse</h5>
+			</div>
+			<h4 class="subtitle">Encoding Filters</h4>
+			<div class="content hide">
+				<h5 class="subtitle">md5</h5>
+				<h5 class="subtitle">sha1</h5>
+				<h5 class="subtitle">sha256</h5>
+				<h5 class="subtitle">hmac_sha1</h5>
+				<h5 class="subtitle">hmac_sha256</h5>
+				<h5 class="subtitle">hmac_sha1</h5>
+			</div>
+			<h4 class="subtitle">URL Filters</h4>
+			<div class="content hide">
+				<h5 class="subtitle"></h5>
+				<h5 class="subtitle">asset_url</h5>
+				<h5 class="subtitle">asset_img_url</h5>
+				<h5 class="subtitle">file_url</h5>
+				<h5 class="subtitle">file_img_url</h5>
+				<h5 class="subtitle">customer_login_link</h5>
+				<h5 class="subtitle">global_asset_url</h5>
+				<h5 class="subtitle">img_url</h5>
+				<h5 class="subtitle">link_to</h5>
+				<h5 class="subtitle">link_to_vendor</h5>
+				<h5 class="subtitle">link_to_type</h5>
+				<h5 class="subtitle">link_to_tag</h5>
+				<h5 class="subtitle">link_to_add_tag</h5>
+				<h5 class="subtitle">link_to_remove_tag</h5>
+				<h5 class="subtitle">payment_type_img_url</h5>
+				<h5 class="subtitle">product_img_url</h5>
+				<h5 class="subtitle">collection_img_url</h5>
+				<h5 class="subtitle">shopify_asset_url</h5>
+				<h5 class="subtitle">url_for_type</h5>
+				<h5 class="subtitle">url_for_vendor</h5>
+				<h5 class="subtitle">within</h5>
+			</div>
+			<h4 class="subtitle">Other Filters</h4>
+			<div class="content hide">
+				<h5 class="subtitle">date</h5>
+				<h5 class="subtitle">default</h5>
+				<h5 class="subtitle">default_errors</h5>
+				<h5 class="subtitle">default_pagination</h5>
+				<h5 class="subtitle">hex_to_rgba</h5>
+				<h5 class="subtitle">highlight_active_tag</h5>
+				<h5 class="subtitle">json</h5>
+				<h5 class="subtitle">weight_with_unit</h5>
+			</div>
+		</div>
+	</section>
+	
+</div>
+
+
+<script>
+
+	const subtitles = document.querySelectorAll('.subtitle');
+
+	function toggleOpen(){
+		let method = this.nextElementSibling.classList.contains('hide') ? 'remove' : 'add'
+		this.nextElementSibling.classList[method]('hide')	
+	}
+
+	subtitles.forEach(subtitle => subtitle.addEventListener('click', toggleOpen))
+	
+</script>
+
+	
+</body>
+</html>

@@ -19,37 +19,473 @@
 	</section>
 
 	<section class="objects">
-		<h2 class="subtitle">Template Variables</h2>
+		<h2 class="subtitle">Template Variables <span class="arrow arrow-close">►</span></h2>
 		<div class="content hide">
 			<p>Shopify objects that contain attributes that can be dynamically put on the page. For example, the product object contains an attribute called title that can be used to output the title of a product.</p>
 
 			<p>The <strong>handle</strong> is used to access the attributes of a Liquid object. By default, it is the object’s title in lowercase with any spaces and special characters replaced by hyphens (-). Every object in Liquid (product, collection, blog, menu) has a handle.</p>
-
-			<h4 class="subtitle">Article</h4>
+			<h3 class="subtitle">Collections & Products</h3>
 			<div class="content hide">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At modi, laudantium, fugiat mollitia soluta laboriosam! Facere porro possimus reiciendis est veniam nemo ipsam fugit, in!</p>
+				<h4 class="subtitle">Collection <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">all_types</h5>
+					<h5 class="subtitle">all_vendors</h5>
+					<h5 class="subtitle">current_type</h5>
+					<h5 class="subtitle">current_vendor</h5>
+					<h5 class="subtitle">default_sort_by</h5>
+					<h5 class="subtitle">description</h5>
+					<h5 class="subtitle">handle</h5>
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">image</h5>
+					<h5 class="subtitle">image.src</h5>
+					<h5 class="subtitle">next_product</h5>
+					<h5 class="subtitle">previous_product</h5>
+					<h5 class="subtitle">products</h5>
+					<h5 class="subtitle">products_count</h5>
+					<h5 class="subtitle">template_suffix</h5>
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">tags</h5>
+					<h5 class="subtitle">url</h5>
+				</div>
+				<h4 class="subtitle">Product <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">available</h5>
+					<h5 class="subtitle">collections</h5>
+					<h5 class="subtitle">compar_at_price_max</h5>
+					<h5 class="subtitle">compar_at_price_min</h5>
+					<h5 class="subtitle">compar_at_price_varies</h5>
+					<h5 class="subtitle">content</h5>
+					<h5 class="subtitle">description</h5>
+					<h5 class="subtitle">featured_image</h5>
+					<h5 class="subtitle">first_available_variant</h5>
+					<h5 class="subtitle">handle</h5>
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">images</h5>
+					<h5 class="subtitle">image</h5>
+					<h5 class="subtitle">options</h5>
+					<h5 class="subtitle">price</h5>
+					<h5 class="subtitle">price_max</h5>
+					<h5 class="subtitle">price_min</h5>
+					<h5 class="subtitle">price_varies</h5>
+					<h5 class="subtitle">selected_variant</h5>
+					<h5 class="subtitle">select_or_first_availble_variant</h5>
+					<h5 class="subtitle">tags</h5>
+					<h5 class="subtitle">template_suffix</h5>
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">type</h5>
+					<h5 class="subtitle">url</h5>
+					<h5 class="subtitle">variants</h5>
+					<h5 class="subtitle">vendor</h5>
+				</div>
+				<h4 class="subtitle">Variant <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">available</h5>
+					<h5 class="subtitle">barcode</h5>
+					<h5 class="subtitle">compare_at_price</h5>
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">image</h5>
+					<h5 class="subtitle">inventory_management</h5>
+					<h5 class="subtitle">inventory_policy</h5>
+					<h5 class="subtitle">inventory_quantity</h5>
+					<h5 class="subtitle">option1</h5>
+					<h5 class="subtitle">option2</h5>
+					<h5 class="subtitle">option3</h5>
+					<h5 class="subtitle">price</h5>
+					<h5 class="subtitle">requires_shipping</h5>
+					<h5 class="subtitle">selected</h5>
+					<h5 class="subtitle">sku</h5>
+					<h5 class="subtitle">taxable</h5>
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">url</h5>
+					<h5 class="subtitle">weight</h5>
+					<h5 class="subtitle">weight_unit</h5>
+					<h5 class="subtitle">weight_in_unit</h5>
+				</div>
+				<hr>
 			</div>
-			<h4>Blog</h4>
-			<h4>Cart</h4>
-			<h4>Collection</h4>
-			<h4>Customer</h4>
-			<h4>Images</h4>
-			<h4>Linklist</h4>
-			<h4>Pages</h4>
-			<h4>Product</h4>
-			<h4>Shop</h4>
+			<h3 class="subtitle">The Shop</h3>
+			<div class="content hide">
+				<h4 class="subtitle">Shop <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">address</h5>
+					<h5 class="subtitle">collections_count</h5>
+					<h5 class="subtitle">currency</h5>
+					<h5 class="subtitle">description</h5>
+					<h5 class="subtitle">domain</h5>
+					<h5 class="subtitle">email</h5>
+					<h5 class="subtitle">enabled_payment_types</h5>
+					<h5 class="subtitle">metafields</h5>
+					<h5 class="subtitle">money_format</h5>
+					<h5 class="subtitle">money_with_currency_format</h5>
+					<h5 class="subtitle">name</h5>
+					<h5 class="subtitle">password_message</h5>
+					<h5 class="subtitle">permanent_domain</h5>
+					<h5 class="subtitle">products_count</h5>
+					<h5 class="subtitle">types</h5>
+					<h5 class="subtitle">url</h5>
+					<h5 class="subtitle">secure_url</h5>
+					<h5 class="subtitle">vendors</h5>
+					<h5 class="subtitle">locale</h5>
+				</div>
+				<h4 class="subtitle">Blog <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">all_tags</h5>
+					<h5 class="subtitle">articles</h5>
+					<h5 class="subtitle">articles_count</h5>
+					<h5 class="subtitle">comments_enabled?</h5>
+					<h5 class="subtitle">handle</h5>
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">moderated?</h5>
+					<h5 class="subtitle">next-article</h5>
+					<h5 class="subtitle">previous-article</h5>
+					<h5 class="subtitle">tags</h5>
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">url</h5>
+				</div>
+				<h4 class="subtitle">Article <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">author</h5>
+					<h5 class="subtitle">comments</h5>
+					<h5 class="subtitle">comments_count</h5>
+					<h5 class="subtitle">comments_enabled?</h5>
+					<h5 class="subtitle">comment_post_url</h5>
+					<h5 class="subtitle">content</h5>
+					<h5 class="subtitle">created_at</h5>
+					<h5 class="subtitle">excerpt</h5>
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">image</h5>
+					<h5 class="subtitle">image.src</h5>
+					<h5 class="subtitle">moderated?</h5>
+					<h5 class="subtitle">published_at</h5>
+					<h5 class="subtitle">tags</h5>
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">url</h5>
+					<h5 class="subtitle">user.account_owner</h5>
+					<h5 class="subtitle">user.bio</h5>
+					<h5 class="subtitle">user.first_name</h5>
+					<h5 class="subtitle">user.last_name</h5>
+					<h5 class="subtitle">user.homepage</h5>
+				</div>
+				<h4 class="subtitle">Comment <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">author</h5>
+					<h5 class="subtitle">email</h5>
+					<h5 class="subtitle">content</h5>
+					<h5 class="subtitle">status</h5>
+					<h5 class="subtitle">url</h5>
+				</div>
+				<h4 class="subtitle">Page <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">author</h5>
+					<h5 class="subtitle">content</h5>
+					<h5 class="subtitle">handle</h5>
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">published_at</h5>
+					<h5 class="subtitle">template_suffix</h5>
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">url</h5>
+				</div>
+				<h4 class="subtitle">Linklist <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">handle</h5>
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">links</h5>
+					<h5 class="subtitle">title</h5>
+				</div>
+				<h4 class="subtitle">Link <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">active</h5>
+					<h5 class="subtitle">object</h5>
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">type</h5>
+					<h5 class="subtitle">url</h5>
+				</div>
+				<h4 class="subtitle">Search <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">performed</h5>
+					<h5 class="subtitle">results</h5>
+					<h5 class="subtitle">results_count</h5>
+					<h5 class="subtitle">terms</h5>
+				</div>
+				<hr>
+			</div>
+			<h3 class="subtitle">The Customer</h3>
+			<div class="content hide">
+				<h4 class="subtitle">Customer Address <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">first_name</h5>
+					<h5 class="subtitle">last_name</h5>
+					<h5 class="subtitle">address1</h5>
+					<h5 class="subtitle">address2</h5>
+					<h5 class="subtitle">street</h5>
+					<h5 class="subtitle">company</h5>
+					<h5 class="subtitle">city</h5>
+					<h5 class="subtitle">province</h5>
+					<h5 class="subtitle">province_code</h5>
+					<h5 class="subtitle">zip</h5>
+					<h5 class="subtitle">country</h5>
+					<h5 class="subtitle">country_code</h5>
+					<h5 class="subtitle">phone</h5>
+					<h5 class="subtitle">id</h5>
+				</div>
+				<h4 class="subtitle">Customer <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">accepts_marketing</h5>
+					<h5 class="subtitle">addresses</h5>
+					<h5 class="subtitle">addresses_count</h5>
+					<h5 class="subtitle">default_address</h5>
+					<h5 class="subtitle">email</h5>
+					<h5 class="subtitle">first_name</h5>
+					<h5 class="subtitle">has_account</h5>
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">last_name</h5>
+					<h5 class="subtitle">last_order</h5>
+					<h5 class="subtitle">name</h5>
+					<h5 class="subtitle">orders</h5>
+					<h5 class="subtitle">orders_count</h5>
+					<h5 class="subtitle">tags</h5>
+					<h5 class="subtitle">total_spent</h5>
+					
+				</div>
+				<h4 class="subtitle">Order <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">billing_address</h5>
+					<h5 class="subtitle">cancelled</h5>
+					<h5 class="subtitle">cancelled_at</h5>
+					<h5 class="subtitle">cancel_reason</h5>
+					<h5 class="subtitle">cancel_reason_label</h5>
+					<h5 class="subtitle">create_at</h5>
+					<h5 class="subtitle">customer</h5>
+					<h5 class="subtitle">customer_url</h5>
+					<h5 class="subtitle">discounts</h5>
+					<h5 class="subtitle">email</h5>
+					<h5 class="subtitle">financial_status</h5>
+					<h5 class="subtitle">financial_status_label</h5>
+					<h5 class="subtitle">fulfillment_status</h5>
+					<h5 class="subtitle">fulfillment_status_label</h5>
+					<h5 class="subtitle">line_items</h5>
+					<h5 class="subtitle">location</h5>
+					<h5 class="subtitle">order_status_url</h5>
+					<h5 class="subtitle">name</h5>
+					<h5 class="subtitle">note</h5>
+					<h5 class="subtitle">order_number</h5>
+					<h5 class="subtitle">shipping_address</h5>
+					<h5 class="subtitle">shipping_methods</h5>
+					<h5 class="subtitle">shipping_price</h5>
+					<h5 class="subtitle">subtotal_price</h5>
+					<h5 class="subtitle">tax_lines</h5>
+					<h5 class="subtitle">tax_price</h5>
+					<h5 class="subtitle">total_price</h5>
+					<h5 class="subtitle">transactions</h5>
+				</div>
+				<h4 class="subtitle">Theme <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">role</h5>
+					<h5 class="subtitle">name</h5>
+				</div>
+			<hr>
+			</div>
+			<h3 class="subtitle">Cart and Checkout</h3>
+			<div class="content hide">
+				<h4 class="subtitle">Cart <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">attributes</h5>
+					<h5 class="subtitle">item_count</h5>
+					<h5 class="subtitle">items</h5>
+					<h5 class="subtitle">note</h5>
+					<h5 class="subtitle">total_price</h5>
+					<h5 class="subtitle">total_weight</h5>
+				</div>
+				<h4 class="subtitle">Checkout <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">applied_gift_cards</h5>
+					<h5 class="subtitle">attributes</h5>
+					<h5 class="subtitle">billing_address</h5>
+					<h5 class="subtitle">buyer_accepts_marketing</h5>
+					<h5 class="subtitle">discounts</h5>
+					<h5 class="subtitle">discounts_amount</h5>
+					<h5 class="subtitle">discount_savings</h5>
+					<h5 class="subtitle">email</h5>
+					<h5 class="subtitle">gift_cards_amount</h5>
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">line_items</h5>
+					<h5 class="subtitle">name</h5>
+					<h5 class="subtitle">note</h5>
+					<h5 class="subtitle">order</h5>
+					<h5 class="subtitle">order_id</h5>
+					<h5 class="subtitle">order_name</h5>
+					<h5 class="subtitle">order_number</h5>
+					<h5 class="subtitle">requires_shipping</h5>
+					<h5 class="subtitle">shipping_address</h5>
+					<h5 class="subtitle">shipping_method</h5>
+					<h5 class="subtitle">shipping_methods</h5>
+					<h5 class="subtitle">shipping_price</h5>
+					<h5 class="subtitle">subtotal_price</h5>
+					<h5 class="subtitle">tax_lines</h5>
+					<h5 class="subtitle">tax_price</h5>
+					<h5 class="subtitle">total_price</h5>
+					<h5 class="subtitle">transactions</h5>
+				</div>
+				<h4 class="subtitle">Address <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">name</h5>
+					<h5 class="subtitle">first_name</h5>
+					<h5 class="subtitle">last_name</h5>
+					<h5 class="subtitle">address1</h5>
+					<h5 class="subtitle">address2</h5>
+					<h5 class="subtitle">street</h5>
+					<h5 class="subtitle">company</h5>
+					<h5 class="subtitle">city</h5>
+					<h5 class="subtitle">province</h5>
+					<h5 class="subtitle">province_code</h5>
+					<h5 class="subtitle">zip</h5>
+					<h5 class="subtitle">country</h5>
+					<h5 class="subtitle">country_code</h5>
+					<h5 class="subtitle">phone</h5>
+				</div>
+				<h4 class="subtitle">Discount <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">code</h5>
+					<h5 class="subtitle">amount</h5>
+					<h5 class="subtitle">total_amount</h5>
+					<h5 class="subtitle">savings</h5>
+					<h5 class="subtitle">total_savings</h5>
+					<h5 class="subtitle">type</h5>
+				</div>
+				<h4 class="subtitle">Fulfillment <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">tracking_company</h5>
+					<h5 class="subtitle">tracking_number</h5>
+					<h5 class="subtitle">tracking_url</h5>
+					<h5 class="subtitle">fulfillment_line_items</h5>
+					<h5 class="subtitle">item_count</h5>
+				</div>
+				<h4 class="subtitle">Gift Card <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">balance</h5>
+					<h5 class="subtitle">card_code</h5>
+					<h5 class="subtitle">currency</h5>
+					<h5 class="subtitle">customer</h5>
+					<h5 class="subtitle">enabled</h5>
+					<h5 class="subtitle">expired</h5>
+					<h5 class="subtitle">expires_on</h5>
+					<h5 class="subtitle">initial_value</h5>
+					<h5 class="subtitle">properties</h5>
+					<h5 class="subtitle">url</h5>
+				</div>
+				<h4 class="subtitle">Line Item <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">fulfillment</h5>
+					<h5 class="subtitle">grams</h5>
+					<h5 class="subtitle">key</h5>
+					<h5 class="subtitle">id(deprecated)</h5>
+					<h5 class="subtitle">image</h5>
+					<h5 class="subtitle">line_price</h5>
+					<h5 class="subtitle">price</h5>
+					<h5 class="subtitle">product</h5>
+					<h5 class="subtitle">product_id</h5>
+					<h5 class="subtitle">properties</h5>
+					<h5 class="subtitle">quantity</h5>
+					<h5 class="subtitle">requires_shipping</h5>
+					<h5 class="subtitle">sku</h5>
+					<h5 class="subtitle">taxable</h5>
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">type</h5>
+					<h5 class="subtitle">url</h5>
+					<h5 class="subtitle">variant</h5>
+					<h5 class="subtitle">variant_id</h5>
+					<h5 class="subtitle">vendor</h5>
+				</div>
+				<h4 class="subtitle">Tax Line <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">price</h5>
+					<h5 class="subtitle">rate</h5>
+					<h5 class="subtitle">rate_percentage</h5>
+				</div>
+
+				<h4 class="subtitle">Transaction <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">amount</h5>
+					<h5 class="subtitle">name</h5>
+					<h5 class="subtitle">status</h5>
+					<h5 class="subtitle">status_label</h5>
+					<h5 class="subtitle">create_at</h5>
+					<h5 class="subtitle">receipt</h5>
+					<h5 class="subtitle">kind</h5>
+					<h5 class="subtitle">gateway</h5>
+					<h5 class="subtitle">payment_details</h5>
+				</div>
+				<h4 class="subtitle">Shipping Method <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">handle</h5>
+					<h5 class="subtitle">price</h5>
+					<h5 class="subtitle">title</h5>
+				</div>
+			<hr>
+			</div>
+
+			<h4 class="subtitle">Country option tags <span class="arrow arrow-close">►</span></h4>
+			<div class="content hide">
+				<h5 class="subtitle">country_option_tags</h5>
+			</div>
+			<h4 class="subtitle">Current Tags <span class="arrow arrow-close">►</span></h4>
+			<div class="content hide">
+				<h5 class="subtitle">current_tags</h5>
+			</div>
+
+
+			<h4 class="subtitle">forloop <span class="arrow arrow-close">►</span></h4>
+			<div class="content hide">
+				<h5 class="subtitle">first</h5>
+				<h5 class="subtitle">index</h5>
+				<h5 class="subtitle">index()</h5>
+				<h5 class="subtitle">last</h5>
+				<h5 class="subtitle">rindex</h5>
+				<h5 class="subtitle">rindex()</h5>
+				<h5 class="subtitle">length</h5>
+			</div>
+
+
+
+
+
+
+
+
+			<h4 class="subtitle">Tablerow <span class="arrow arrow-close">►</span></h4>
+			<div class="content hide">
+				<h5 class="subtitle">length</h5>
+				<h5 class="subtitle">index</h5>
+				<h5 class="subtitle">index()</h5>
+				<h5 class="subtitle">rindex</h5>
+				<h5 class="subtitle">rindex()</h5>
+				<h5 class="subtitle">first</h5>
+				<h5 class="subtitle">last</h5>
+				<h5 class="subtitle">col</h5>
+				<h5 class="subtitle">col()</h5>
+				<h5 class="subtitle">col_first</h5>
+				<h5 class="subtitle">col_last</h5>
+			</div>
+
+
 		</div>
 		
 	</section>
 
 	<section class="tags">
-		<h2 class="subtitle">Liquid Tags</h2>
+		<h2 class="subtitle">Liquid Tags <span class="arrow arrow-close">►</span></h2>
 		<div class="content hide">
 			<p>There are two types of tags; <strong>Output Statment Tags</strong> are used to display information on the page and uses <code>{{ }}</code> and <strong>Logic statment Tags</strong> are used to perform logic and uses <code>{% %}</code></p>
 			<p>The following tags are logic based and therefore normally use <code>{% %}</code></p>
-			<h4 class="subtitle">Variable Tags</h4>
+			<h4 class="subtitle">Variable Tags <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">assign</h5>
+				<h5 class="subtitle">assign <span class="arrow arrow-close">►</span></h5>
 				<div class="content hide">
 					<p>Creates a new variable</p>
 <pre>
@@ -64,7 +500,7 @@ elephant
 </pre>	
 				<hr>
 				</div>
-				<h5 class="subtitle">capture</h5>
+				<h5 class="subtitle">capture <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
 						<p>Captures the string inside of the opening and closing tags and assigns it to a variable. Variables created through {% capture %} are strings. This is very useful for capturing information that's being looped over.</p>
 <pre>
@@ -83,7 +519,7 @@ item1 item2 item3
 						<p>assuming those are the items in your cart.</p>
 						<hr>
 					</div>
-				<h5 class="subtitle">increment</h5>
+				<h5 class="subtitle">increment <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
 						<p>increment sets the variable to 0, then every time it is called after, it increments the variable by 1. It works independently of variables created using the assign or capture keywords even if they have the same name.</p>
 <pre>
@@ -105,7 +541,7 @@ returns
 </pre>	
 					<hr>
 					</div>
-				<h5 class="subtitle">decrement</h5>
+				<h5 class="subtitle">decrement <span class="arrow arrow-close">►</span></h5>
 				<div class="content hide">
 					<p>decrement sets the variable to 0, then every time it is called after, it decrements the variable by 1. It works independently of variables created using the assign or capture keywords even if they have the same name.</p>
 <pre>
@@ -128,9 +564,9 @@ returns
 				<hr>
 				</div>
 			</div>
-			<h4 class="subtitle">Iteration Tags</h4>
+			<h4 class="subtitle">Iteration Tags <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">for</h5>
+				<h5 class="subtitle">for <span class="arrow arrow-close">►</span></h5>
 				<div class="content hide">
 					<p>Repeatedly executes a block of code.</p>
 <pre>
@@ -141,7 +577,7 @@ returns
 					<p>for loops can output a maximum of 50 results per page. In cases where there are more than 50 results, use the paginate tag to split them across multiple pages.</p>
 					<hr>
 				</div>
-				<h5 class="subtitle">cycle</h5>
+				<h5 class="subtitle">cycle <span class="arrow arrow-close">►</span></h5>
 				<div class="content hide">
 					<p>Loops through a group of strings and outputs them in the order that they were passed as parameters. Each time cycle is called, the next string that was passed as a parameter is output. In this example we're using it to add the class of last to every fourth div.</p>
 <pre>
@@ -164,7 +600,7 @@ returns
 </pre>	
 				<hr>
 				</div>
-				<h5 class="subtitle">tablerow</h5>
+				<h5 class="subtitle">tablerow <span class="arrow arrow-close">►</span></h5>
 				<div class="content hide">
 					<p>Generates an HTML . Must be wrapped in an opening and closing HTML tags.</p>
 <pre>
@@ -221,137 +657,1817 @@ returns
 				<hr>
 				</div>
 			</div>
-			<h4 class="subtitle">Control Flow Tags</h4>
+			<h4 class="subtitle">Control Flow Tags <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">if</h5>
-				<h5 class="subtitle">unless</h5>
-				<h5 class="subtitle">case</h5>
+				<h5 class="subtitle">if <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Acts as a standard if statement and executes a block of code only if a certain condition is met</p>
+<pre>
+<code data-language="html">
+{% if product.title == 'the blue book' %}
+  You are buying the blue book!
+{% endif %}
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">unless <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Like if, but executes a block of code only if a certain condition is not met (ie. result is false).</p>
+<pre>
+<code data-language="html">
+{% unless product.title == 'the blue book' %}
+  You are NOT buying the blue book!
+{% endunless %}
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">case <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Creates a switch statement to execute a particular block of code when a variable has a specified value. case initializes the switch statement, and when statements define the various conditions. The else statement is used as a catchall to execute if none of the conditions are met.</p>
+<pre>
+<code data-language="html">
+{% case product.title %}
+  {% when 'The blue book' %}
+     You're getting the blue book
+  {% when 'The red book' %}
+    You're getting the red book
+  {% else %}
+     You're getting another color book
+{% endcase %}
+</code>
+</pre>
+					</div>
 			</div>
-			<h4 class="subtitle">Theme Tags</h4>
+			<h4 class="subtitle">Theme Tags <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">comment</h5>
-				<h5 class="subtitle">include</h5>
-				<h5 class="subtitle">form</h5>
-				<h5 class="subtitle">layout</h5>
-				<h5 class="subtitle">paginate</h5>
-				<h5 class="subtitle">raw</h5>
+				<h5 class="subtitle">comment <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>This tag allows you to put comments in your liquid code.</p>
+<pre>
+<code data-language="html">
+{% comment %} This is a great comment {% endcomment %}
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">include <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Inserts a snippet from the snippets folder of a theme.</p>
+<pre>
+<code data-language="html">
+{% include 'snippet-name' %}
+</code>
+</pre>
+						<p>You can also include variables to be used within the snippet.</p>
+<pre>
+<code data-language="html">
+{% include 'snippet', first_var: 'books', second_var: 'videos' %}
+</code>
+</pre>
+						<p>The with parameter assigns a value to a variable inside a snippet that shares the same name as the snippet. If snippet is named 'fruit.liquid' you can use:</p>
+<pre>
+<code data-language="html">
+{% include 'fruit' with 'peach' %}
+
+- this will set the variable fruit inside the snippet to 'peach'.
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">form <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Shopify creates some helpers in order to make standard forms for your shop. Please see the Forms section for more detail.</p>
+					</div>
+				<h5 class="subtitle">layout <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>TBD</p>
+					</div>
+				<h5 class="subtitle">paginate <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>TBD</p>
+					</div>
+				<h5 class="subtitle">raw <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>disable liquid processing engine using the raw tag.</p>
+<pre>
+<code data-language="html">
+{% raw %}{% assign var = 'this'%}{% endraw %}
+
+returns
+
+{% assign var = 'this'%}
+</code>
+</pre>
+					</div>
 			</div>
 		</div>
 
 	</section>
 
 	<section class="filters">
-		<h2 class="subtitle">Liquid Filters</h2>
+		<h2 class="subtitle">Liquid Filters <span class="arrow arrow-close">►</span></h2>
 		<div class="content hide">
-			<h4 class="subtitle">Array Filters</h4>
+			<p>this is the filters section</p>
+			<h4 class="subtitle">Array Filters <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">Join</h5>
-				<h5 class="subtitle">First</h5>
-				<h5 class="subtitle">Last</h5>
-				<h5 class="subtitle">Concat</h5>
-				<h5 class="subtitle">Index</h5>
-				<h5 class="subtitle">Map</h5>
-				<h5 class="subtitle">Reverse</h5>
-				<h5 class="subtitle">Size</h5>
-				<h5 class="subtitle">Sort</h5>
-				<h5 class="subtitle">Uniq</h5>
+				<h5 class="subtitle">Join <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Joins the elements of an array with the character passed as the parameter. The result is a single string.</p>
+<pre>
+<code>
+{{ product.tags | join: ', ' }}
+
+returns
+
+tag1, tag2, tag3
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">First <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the first element of an array.</p>
+<pre>
+<code>
+<!-- product.tags = "small", "medium", "large", "xl" -->
+{{ product.tags | first }}
+
+returns
+
+small
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">Last <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the last element of an array.</p>
+<pre>
+<code>
+<!-- product.tags = "small", "medium", "large", "xl" -->
+{{ product.tags | first }}
+
+returns
+
+xl
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">Concat <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Concatenates two arrays together, resulting in all elements in one array.</p>
+<pre>
+<code>
+{% assign fruits = "clementine, pineapples, kiwis, tomatoes" | split: ", " %}
+{% assign vegetables = "broccoli, cauliflower" | split: ", " %}
+
+{% assign plants = fruits | concat: vegetables %}
+
+{{ plants }}
+
+returns
+
+clementine pineapples kiwis tomatoes broccoli cauliflower
+
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">Index <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the item at the specified index location in an array</p>
+<pre>
+<code data-language="html">
+<!-- product.tags = "small", "medium", "large", "xl" -->
+{{ product.tags[1] }}
+
+returns
+
+medium
+</code>
+</pre>
+
+					</div>
+				<h5 class="subtitle">Map <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Outputs a string of each array element.</p>
+<pre>
+<code data-language="html">
+<!-- product.tags = "small", "medium", "large", "xl" -->
+{% assign tags = product.tags | map: 'tag' %}
+
+returns
+
+smallmediumlargexl
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">Reverse <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Reverses the order of an array</p>
+<pre>
+<code>
+{% assign my_array = "apples, oranges, peaches, plums" | split: ", " %}
+
+{{ my_array | reverse | join: ", " }}
+
+returns
+
+plums, peaches, oranges, apples
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">Size <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the number of characters in a string or number of elements of an array</p>
+<pre>
+<code>
+{% assign my_array = "apples, oranges, peaches, plums" | split: ", " %}
+
+{{ my_array | size }}
+
+returns
+
+4
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">Sort <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Sorts the elements of an array by a given attribute of an element in the array. The order is case-sensitive</p>
+<pre>
+<code>
+<!-- products = "a", "b", "A", "B" -->
+{% assign products = collection.products | sort: 'title' %}
+{% for product in products %}
+   {{ product.title }}
+{% endfor %}
+
+returns
+
+A B a b
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">Uniq <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Removes any duplicate instances of elements in an array.</p>
+<pre>
+<code>
+{% assign fruits = "orange apple banana apple orange" %}
+{{ fruits | split: ' ' | uniq | join: ' ' }}
+
+returns
+
+orange apple banana
+</code>
+</pre>
+					</div>
 			</div>
-			<h4 class="subtitle">HTML Filters</h4>
+			<h4 class="subtitle">Color Filters <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">image_tag</h5>
-				<h5 class="subtitle">script_tag</h5>
-				<h5 class="subtitle">stylesheet_tag</h5>
+				<h5 class="subtitle">color_to_rgb <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
+				<h5 class="subtitle">color_to_hsl <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
+				<h5 class="subtitle">color_extract <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
+				<h5 class="subtitle">color_brightness <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
+				<h5 class="subtitle">color_modify <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
+				<h5 class="subtitle">color_lighten <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
+				<h5 class="subtitle">color_darken <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
+				<h5 class="subtitle">color_saturate <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
+				<h5 class="subtitle">color_desaturate <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
+				<h5 class="subtitle">color_mix <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					
+				</div>
 			</div>
-			<h4 class="subtitle">Math Filters</h4>
+			<h4 class="subtitle">HTML Filters <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">abs</h5>
-				<h5 class="subtitle">ceil</h5>
-				<h5 class="subtitle">divided_by</h5>
-				<h5 class="subtitle">floor</h5>
-				<h5 class="subtitle">minus</h5>
-				<h5 class="subtitle">plus</h5>
-				<h5 class="subtitle">round</h5>
-				<h5 class="subtitle">times</h5>
-				<h5 class="subtitle">modulo</h5>
+				<h5 class="subtitle">image_tag <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Generates an image HTML tag</p>
+<pre>
+<code>
+{{ product | img_tag }}
+</code>
+</pre>
+					<p>img_tag accepts parameters to output an alt tag and class names. The first parameter is output as the alt text, and any other following parameters are output as CSS classes.</p>
+<pre>
+<code>
+{{ 'smirking_gnome.gif' | asset_url | img_tag: 'Smirking Gnome', 'cssclass1 cssclass2' }}
+
+returns
+
+<img src="//cdn.shopify.com/s/files/1/0147/8382/t/15/assets/smirking_gnome.gif?v=1384022871" alt="Smirking Gnome" class="cssclass1 cssclass2" />
+</code>
+</pre>
+				</div>
+				<h5 class="subtitle">script_tag <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Generates a script HTML tag. It can be used to add your own JavaScript file, or JavaScript files that come with Shopify.</p>
+<pre>
+<code>
+{{ "shopify_common.js" | shopify_asset_url | script_tag }}
+</code>
+</pre>
+				</div>
+				<h5 class="subtitle">stylesheet_tag <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Generates a stylesheet HTML tag</p>
+<pre>
+<code>
+{{ 'styles.scss' | asset_url | stylesheet_tag }}
+</code>
+</pre>
+				</div>
 			</div>
-			<h4 class="subtitle">Money Filters</h4>
+			<h4 class="subtitle">Math Filters <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">money</h5>
-				<h5 class="subtitle">money_with_currency</h5>
-				<h5 class="subtitle">money_without_trailing_zeros</h5>
-				<h5 class="subtitle">money_without_currency class="subtitle"</h5>
+				<h5 class="subtitle">abs <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the absolute value of a number</p>
+<pre>
+<code>
+{{ -42 | abs }}
+
+returns
+
+42
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">ceil <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns a number up to the nearest integer</p>
+<pre>
+<code>
+{{ 4.2 | ceil }}
+
+returns
+
+4
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">divided_by <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Divides the given number by the number provided as a parameter.  It rounds down to the nearest integer</p>
+<pre>
+<code>
+{{ 200 | divided_by: 10 }}
+
+returns
+
+20
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">floor <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Rounds a number down to the nearest integer</p>
+<pre>
+<code>
+{{ 4.9 | floor }}
+
+returns
+
+4
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">minus <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Subtracts a number from the number given.</p>
+<pre>
+<code>
+<!-- product.price = 200 -->
+{{ product.price | minus: 15 }}
+
+returns
+
+185
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">plus <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Adds a number to the number given.</p>
+<pre>
+<code>
+<!-- product.price = 200 -->
+{{ product.price | plus: 15 }}
+
+returns
+
+215
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">round <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Rounds the output to the nearest integer or specified number of decimals.</p>
+<pre>
+<code>
+{{ 4.6 | round }}
+{{ 4.2 | round }}
+{{ 4.5612 | round: 2 }}
+
+returns
+
+5
+4
+4.56
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">times <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Multiplies an output by a number.</p>
+<pre>
+<code>
+<!-- product.price = 200 -->
+{{ product.price | times: 1.15 }}
+
+return
+
+230
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">modulo <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Divides an output by a number and returns the remainder.</p>
+<pre>
+<code>
+{{ 12 | modulo:5 }}
+
+returns
+
+2
+</code>
+</pre>
+					</div>
 			</div>
-			<h4 class="subtitle">String Filters</h4>
+			<h4 class="subtitle">Money Filters <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">append</h5>
-				<h5 class="subtitle">camelcase</h5>
-				<h5 class="subtitle">capitalize</h5>
-				<h5 class="subtitle">downcase</h5>
-				<h5 class="subtitle">escape</h5>
-				<h5 class="subtitle">handle/handleize</h5>
-				<h5 class="subtitle">newline_to_br</h5>
-				<h5 class="subtitle">pluralize</h5>
-				<h5 class="subtitle">prepend</h5>
-				<h5 class="subtitle">remove</h5>
-				<h5 class="subtitle">remove_first</h5>
-				<h5 class="subtitle">replace</h5>
-				<h5 class="subtitle">replace_first</h5>
-				<h5 class="subtitle">slice</h5>
-				<h5 class="subtitle">strip</h5>
-				<h5 class="subtitle">lstrip</h5>
-				<h5 class="subtitle">rstrip</h5>
-				<h5 class="subtitle">strip_newlines</h5>
-				<h5 class="subtitle">truncate</h5>
-				<h5 class="subtitle">truncatewords</h5>
-				<h5 class="subtitle">upcase</h5>
-				<h5 class="subtitle">url_encode</h5>
-				<h5 class="subtitle">url_escape</h5>
-				<h5 class="subtitle">url_param_escape</h5>
-				<h5 class="subtitle">reverse</h5>
+				<h5 class="subtitle">money <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Formats the price based on the shop's <strong>HTML without currency</strong> setting</p>
+<pre>
+<code>
+{{ 145 | money }}
+
+returns
+
+$1.45
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">money_with_currency <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Formats the price based on the shop's <strong>HTML with currency</strong> setting.</p>
+<pre>
+<code>
+{{ 1.45 | money_with_currency }}
+
+returns
+
+$1.45 CAD
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">money_without_trailing_zeros <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Formats the price based on the shop's <strong>HTML with currency</strong> setting and excludes the decimal point and trailing zeros.</p>
+<pre>
+<code>
+{{ 2000 | money_without_trailing_zeros }}
+
+returns
+
+$20
+</code>
+</pre>
+					<p>Only trailing zeros are removed, not other digits:</p>
+<pre>
+<code>
+{{ 145 | money_without_trailing_zeros }}
+
+returns
+
+$1.45
+</code>
+</pre>
+
+					</div>
+				<h5 class="subtitle">money_without_currency <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Formats the price using a decimal.</p>
+<pre>
+<code>
+{{ 145 | money_without_currency }}
+
+returns
+
+1.45
+</code>
+</pre>
+					</div>
 			</div>
-			<h4 class="subtitle">Encoding Filters</h4>
+			<h4 class="subtitle">String Filters <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">md5</h5>
-				<h5 class="subtitle">sha1</h5>
-				<h5 class="subtitle">sha256</h5>
-				<h5 class="subtitle">hmac_sha1</h5>
-				<h5 class="subtitle">hmac_sha256</h5>
-				<h5 class="subtitle">hmac_sha1</h5>
+				<h5 class="subtitle">append <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Appends characters to a string.</p>
+<pre>
+<code>
+{{ 'book' | append: '.png' }}
+
+returns
+
+book.png
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">camelcase <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a string into CamelCase.</p>
+<pre>
+<code>
+{{ 'this-is-awesome' | camelcase }}
+
+returns
+
+ThisIsAwesome
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">capitalize <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Capitalizes the first word in a string</p>
+<pre>
+<code>
+{{ 'this is awesome' | capitalize }}
+
+returns
+
+This is awesome
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">downcase <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a string into lowercase</p>
+<pre>
+<code>
+{{ "THIS IS AWESOME" | downcase }}
+
+returns
+
+this is awesome
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">escape <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Escapes text. For example prevents the tags from rendering and they show up as a string.</p>
+<pre>
+<code>
+{{ "<p>The book</p>" | escape }}
+
+returns
+
+<p>The book</p>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">handle/handleize <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Takes a string and turns it into a slug.</p>
+<pre>
+<code>
+{{ '100% M & Ms!!!' | handleize }}
+
+returns
+
+100-m-ms
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">newline_to_br <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Inserts a linebreak HTML tag in front of each line break in a string.</p>
+<pre>
+<code>
+{% capture var %}
+One Fish
+Two Fish
+Red Fish
+Blue Fish
+{% endcapture %}
+{{ var | newline_to_br }}
+
+returns
+
+One Fish<br>
+Two Fish<br>
+Red Fish<br>
+Blue Fish<br>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">pluralize <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Outputs the singular or plural version of a string based on the value of a number. The first parameter is the singular string and the second parameter is the plural string</p>
+<pre>
+<code>
+4 {{ 4 | pluralize: 'item', 'items' }}
+1 {{ 1 | pluralize: 'item', 'items' }}
+
+returns
+
+4 items
+1 item
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">prepend <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Prepends characters to a string.</p>
+<pre>
+<code>
+{{ 'awesome' | prepend: 'this is ' }}
+
+returns
+
+this is awesome
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">remove <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Removes all occurrences of a substring from a string.</p>
+<pre>
+<code>
+{{ "Hello, world. Goodbye, world." | remove: "world" }}
+
+returns
+
+Hello, . Goodbye, 
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">remove_first <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Removes only the first occurrence of a substring from a string.</p>
+<pre>
+<code>
+{{ "Hello, world. Goodbye, world." | remove_first: "world" }}
+
+returns
+
+Hello, . Goodbye, world.
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">replace <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Replaces all occurrences of a string with a substring.</p>
+<pre>
+<code>
+{{ 'this is awesome' | replace: 'awesome', 'amazing' }}
+
+returns
+
+This is amazing
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">replace_first <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Replaces the first occurrence of a string with a substring.</p>
+<pre>
+<code>
+{{ 'this is awesome and awesome' | replace: 'awesome', 'amazing' }}
+
+returns
+
+this is amazing and awesome
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">slice <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>The slice filter returns a substring, starting at the specified index. An optional second parameter can be passed to specify the length of the substring. If no second parameter is given, a substring of one character will be returned.</p>
+<pre>
+<code>
+{{ "hello" | slice: 0 }}
+{{ "hello" | slice: 1 }}
+{{ "hello" | slice: 1, 3 }}
+
+h           
+e
+ell
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">split <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>The split filter takes on a substring as a parameter. The substring is used as a delimiter to divide a string into an array. You can output different parts of an array using array filters.</p>
+<pre>
+<code>
+{% assign words = "Hi, how are you today?" | split: ' ' %}
+
+{% for word in words %}
+{{ word }}
+{% endfor %}
+
+returns
+
+Hi,
+how
+are
+you
+today?
+</code>
+</pre>
+					</div>				<h5 class="subtitle">strip <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Strips tabs, spaces, and newlines (all whitespace) from the left and right side of a string.</p>
+<pre>
+<code>
+{{ '   too many spaces      ' | strip }}
+
+returns
+
+'too many spaces'
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">lstrip <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Strips tabs, spaces, and newlines (all whitespace) from the left side of a string.</p>
+<pre>
+<code>
+{{ '   too many spaces      ' | strip }}
+
+returns
+
+'too many spaces      '
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">rstrip <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Strips tabs, spaces, and newlines (all whitespace) from the right side of a string.</p>
+<pre>
+<code>
+{{ '   too many spaces      ' | strip }}
+
+returns
+
+'     too many spaces'
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">strip_html <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Strips all HTML tags from a string.</p>
+<pre>
+<code>
+{{ "<h1>Hello</h1> World" | strip_html }}
+
+returns
+
+Hello World
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">strip_newlines <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Removes any line breaks/newlines from a string.</p>
+<pre>
+<code>
+{{ product.description | strip_newlines }}
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">truncate <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Truncates a string down to the number of characters passed as the first parameter. An ellipsis (...) is appended to the truncated string and is included in the character count.</p>
+<pre>
+<code>
+{{ "The cat came back the very next day" | truncate: 13 }}
+
+returns
+
+The cat ca...
+</code>
+</pre>
+					<p><strong>Custom ellipsis</strong></p>
+<pre>
+<code>
+{{ "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | truncate: 18, ", and so on" }}
+
+returns
+
+ABCDEFG, and so on
+</code>
+</pre>
+						<p><strong>No ellipsis</strong></p>
+<pre>
+<code>
+{{ "I'm a little teapot, short and stout." | truncate: 15, "" }}
+
+returns
+
+I'm a little te
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">truncatewords <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Truncates a string down to the number of words passed as the first parameter. An ellipsis (...) is appended to the truncated string.</p>
+<pre>
+<code>
+{{ "The cat came back the very next day" | truncatewords: 4 }}
+
+returns
+
+The cat came back...
+</code>
+</pre>
+						<p>Same custom ellipsis as truncate</p>
+					</div>
+				<h5 class="subtitle">upcase <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a string into uppercase.</p>
+<pre>
+<code>
+{{ 'this is awesome' | upcase }}
+
+returns
+
+THIS IS AWESOME
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">url_encode <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts any URL-unsafe characters in a string into percent-encoded characters.</p>
+<pre>
+<code>
+{{ "Apple Pie" | url_encode }}
+
+returns
+
+Apple+Pie
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">url_escape <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Identifies all characters in a string that are not allowed in URLS, and replaces the characters with their escaped variants.</p>
+<pre>
+<code>
+{{ "<hello> & <shopify>" | url_escape }}
+
+returns
+
+%3Chello%3E%20&%20%3Cshopify%3E
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">url_param_escape <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Replaces all characters in a string that are not allowed in URLs with their escaped variants, including the ampersand (&).</p>
+<pre>
+<code>
+{{ "<hello> & <shopify>" | url_param_escape }}
+
+returns
+
+%3Chello%3E%20%26%20%3Cshopify%3E
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">reverse <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>reverse cannot be used directly on a string, but you can split a string into an array, reverse the array, and rejoin it by chaining together other filters:</p>
+<pre>
+<code>
+{{ "Ground control to Major Tom." | split: "" | reverse | join: "" }}
+
+returns
+
+.moT rojaM ot lortnoc dnuorG
+</code>
+</pre>
+					</div>
 			</div>
-			<h4 class="subtitle">URL Filters</h4>
+			<h4 class="subtitle">Encoding Filters <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle"></h5>
-				<h5 class="subtitle">asset_url</h5>
-				<h5 class="subtitle">asset_img_url</h5>
-				<h5 class="subtitle">file_url</h5>
-				<h5 class="subtitle">file_img_url</h5>
-				<h5 class="subtitle">customer_login_link</h5>
-				<h5 class="subtitle">global_asset_url</h5>
-				<h5 class="subtitle">img_url</h5>
-				<h5 class="subtitle">link_to</h5>
-				<h5 class="subtitle">link_to_vendor</h5>
-				<h5 class="subtitle">link_to_type</h5>
-				<h5 class="subtitle">link_to_tag</h5>
-				<h5 class="subtitle">link_to_add_tag</h5>
-				<h5 class="subtitle">link_to_remove_tag</h5>
-				<h5 class="subtitle">payment_type_img_url</h5>
-				<h5 class="subtitle">product_img_url</h5>
-				<h5 class="subtitle">collection_img_url</h5>
-				<h5 class="subtitle">shopify_asset_url</h5>
-				<h5 class="subtitle">url_for_type</h5>
-				<h5 class="subtitle">url_for_vendor</h5>
-				<h5 class="subtitle">within</h5>
+				<h5 class="subtitle">md5 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a string into an MD5 hash.</p>
+					</div>
+				<h5 class="subtitle">sha1 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a string into a SHA-1 hash.</p>
+					</div>
+				<h5 class="subtitle">sha256 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a string into a SHA-256 hash</p>
+					</div>
+				<h5 class="subtitle">hmac_sha1 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a string into a SHA-1 hash using a hash message authentication code (HMAC).</p>
+					</div>
+				<h5 class="subtitle">hmac_sha256 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a string into a SHA-256 hash using a hash message authentication code (HMAC)</p>
+					</div>
 			</div>
-			<h4 class="subtitle">Other Filters</h4>
+			<h4 class="subtitle">URL Filters <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">date</h5>
-				<h5 class="subtitle">default</h5>
-				<h5 class="subtitle">default_errors</h5>
-				<h5 class="subtitle">default_pagination</h5>
-				<h5 class="subtitle">hex_to_rgba</h5>
-				<h5 class="subtitle">highlight_active_tag</h5>
-				<h5 class="subtitle">json</h5>
-				<h5 class="subtitle">weight_with_unit</h5>
+				<h5 class="subtitle">asset_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of a file in the "assets" folder of a theme.</p>
+<pre>
+<code>
+{{ 'shop.css' | asset_url }}
+
+return
+
+//cdn.shopify.com/s/files/1/0087/0462/t/394/assets/shop.css?28253
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">asset_img_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the asset URL of an image in the "assets" folder of a theme. asset_img_url accepts an image size parameter.</p>
+<pre>
+<code>
+{{ 'logo.png' | asset_img_url: '300x' }}
+
+returns
+
+//cdn.shopify.com/s/files/1/0000/0001/t/1/assets/logo_300x.png?42
+
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">file_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of a file in the Files page of the admin.</p>
+<pre>
+<code>
+{{ 'size-chart.pdf' | file_url }}
+
+returns
+
+//cdn.shopify.com/s/files/1/0087/0462/files/size-chart.pdf?28261
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">file_img_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the asset URL of an image in the Files page of the admin. file_image_url accepts an image size parameter.</p>
+<pre>
+<code>
+{{ 'logo.png' | file_img_url: '1024x768' }}
+
+returns
+
+//cdn.shopify.com/s/files/1/0246/0527/files/logo_1024x768.png?42
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">customer_login_link <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Generates a link to the customer login page.</p>
+<pre>
+<code>
+{{ 'Log in' | customer_login_link }}
+
+returns
+
+<a href="/account/login" id="customer_login_link">Log in</a>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">global_asset_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of a global asset. Global assets are kept in a directory on Shopify's servers. Using global assets can improve the load times of your pages.</p>
+<pre>
+<code>
+{{ 'prototype.js' | global_asset_url | script_tag }}
+
+returns
+
+<script src="//cdn.shopify.com/s/global/prototype.js?1" type="text/javascript"></script>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">img_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of an image. Accepts image size parameters. You can use img_url on the following objects:</p>
+						<ul>
+							<li>product</li>
+							<li>variant</li>
+							<li>line item</li>
+							<li>collection</li>
+							<li>article</li>
+							<li>image</li>
+						</ul>
+						<p>The img_url filter should be followed by the image size that you want to use. If you request a size smaller than your original image's dimensions, Shopify will scale the image for you.</p>
+<pre>
+<code>
+{{ product | img_url: '100x100' }}
+{{ variant | img_url: '720x720' }}
+{{ line_item | img_url: '1024x' }}
+
+returns
+
+https://cdn.shopify.com/s/files/1/1183/1048/products/boat-shoes_100x100.jpeg?v=1459175177
+https://cdn.shopify.com/s/files/1/1183/1048/products/boat-shoes_720x720.jpeg?v=1459175177
+https://cdn.shopify.com/s/files/1/1183/1048/products/boat-shoes_1024x.jpeg?v=1459175177
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">link_to <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Generates an HTML link. The first parameter is the URL of the link, and the optional second parameter is the title of the link.</p>
+<pre>
+<code>
+{{ 'Shopify' | link_to: 'https://www.shopify.com','A link to Shopify' }}
+
+returns
+
+<a href="https://www.shopify.com" title="A link to Shopify">Shopify</a>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">link_to_vendor <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Creates an HTML link to a collection page that lists all products belonging to a vendor.</p>
+<pre>
+<code>
+{{ "Shopify" | link_to_vendor }}
+
+returns
+
+<a href="/collections/vendors?q=Shopify" title="Shopify">Shopify</a>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">link_to_type <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Creates an HTML link to a collection page that lists all products belonging to a product type.</p>
+<pre>
+<code>
+{{ "jeans" | link_to_type }}
+
+returns
+
+<a href="/collections/types?q=jeans" title="jeans">jeans</a>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">link_to_tag <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Creates a link to all products in a collection that have a given tag.</p>
+<pre>
+<code>
+<!-- collection.tags = ["Mens", "Womens", "Sale"] -->
+{% for tag in collection.tags %}
+  {{ tag | link_to_tag: tag }}
+{% endfor %}
+
+returns
+
+<a title="Show products matching tag Mens" href="/collections/frontpage/mens">Mens</a>
+<a title="Show products matching tag Womens" href="/collections/frontpage/womens">Womens</a>
+<a title="Show products matching tag Sale" href="/collections/frontpage/sale">Sale</a>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">link_to_add_tag <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Creates a link to all products in a collection that have a given tag as well as any tags that have been already selected.</p>
+<pre>
+<code>
+<!-- collection.tags = ["Mens", "Womens", "Sale"] -->
+{% for tag in collection.tags %}
+  {{ tag | link_to_add_tag: tag }}
+{% endfor %}
+
+returns
+
+<a title="Show products matching tag Mens" href="/collections/frontpage/mens">Mens</a>
+<a title="Show products matching tag Womens" href="/collections/frontpage/womens+mens">Womens</a>
+<a title="Show products matching tag Sale" href="/collections/frontpage/sale+mens">Sale</a>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">link_to_remove_tag <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Generates a link to all products in a collection that have the given tag and all the previous tags that might have been added already.</p>
+<pre>
+<code>
+<!-- collection.tags = ["Mens", "Womens", "Sale"] -->
+{% for tag in collection.tags %}
+  {{ tag | link_to_add_tag: tag }}
+{% endfor %}
+
+returns
+
+<a title="Remove tag Mens" href="/collections/frontpage">Mens</a>
+<a title="Remove tag Womens" href="/collections/frontpage/mens">Womens</a>
+<a title="Remove tag Sale" href="/collections/frontpage/mens">Sale</a>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">payment_type_img_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of the payment type's SVG image. Used in conjunction with the shop.enabled_payment_types variable.</p>
+<pre>
+<code>
+{% for type in shop.enabled_payment_types %}
+  <img src="{{ type | payment_type_img_url }}" />
+{% endfor %}
+
+returns
+
+<img src="//cdn.shopify.com/s/global/payment_types/creditcards_american_express.svg?3cdcd185ab8e442b12edc11c2cd13655f56b0bb1">
+<img src="//cdn.shopify.com/s/global/payment_types/creditcards_master.svg?3cdcd185ab8e442b12edc11c2cd13655f56b0bb1">
+<img src="//cdn.shopify.com/s/global/payment_types/creditcards_visa.svg?3cdcd185ab8e442b12edc11c2cd13655f56b0bb1">
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">product_img_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Generates the product image URL. Accepts an image size as a parameter.</p>
+<pre>
+<code>
+{{ product.featured_image | product_img_url: "medium" }}
+
+returns
+
+//cdn.shopify.com/s/files/1/0087/0462/products/shirt14_medium.jpeg?v=1309278311
+</code>
+</pre>
+
+					</div>
+				<h5 class="subtitle">collection_img_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the collection image's URL. Accepts an image size as a parameter.</p>
+<pre>
+<code>
+{{ collection.image | collection_img_url: 'medium' }}
+
+returns
+
+//cdn.shopify.com/s/files/1/0087/0462/collections/collection-image_medium.png?v=1337103726
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">shopify_asset_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of a global assets that are found on Shopify's servers. Globally-hosted assets include:</p>
+						<ul>
+							<li>option_selection.js</li>
+							<li>api.jquery.js</li>
+							<li>shopify_common.js</li>
+							<li>customer_area.js</li>
+							<li>currencies.js</li>
+							<li>customer.css</li>
+						</ul>
+<pre>
+<code>
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}
+
+returns
+
+<script src="//cdn.shopify.com/s/shopify/option_selection.js?20cf2ffc74856c1f49a46f6e0abc4acf6ae5bb34" type="text/javascript"></script>
+
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">url_for_type <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Creates a URL that links to a collection page containing products with a specific product type.</p>
+<pre>
+<code>
+{{ "T-shirt" | url_for_type }}
+
+returns
+
+/collections/types?q=T-shirt
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">url_for_vendor <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Creates a URL that links to a collection page containing products with a specific product vendor.</p>
+<pre>
+<code>
+{{ "Shopify" | url_for_vendor }}
+
+returns
+
+/collections/vendors?q=Shopify
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">within <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Creates a collection-aware product URL by prepending /collections/collection-handle to a product URL, where collection-handle is the handle of the collection that is currently being viewed.</p>
+<pre>
+<code>
+<a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+
+returns
+
+<a href="/collections/frontpage/products/alien-poster">Alien Poster</a>
+</code>
+</pre>
+					</div>
+			</div>
+			<h4 class="subtitle">Other Filters <span class="arrow arrow-close">►</span></h4>
+			<div class="content hide">
+				<h5 class="subtitle">date <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a timestamp into another date format.</p>
+						<p>Same parameters as Ruby's strftime method</p>
+<pre>
+<code>
+{{ article.published_at | date: "%a, %b %d, %y" }}
+
+returns
+
+Tue, Apr 22, 14
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">time_tag <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>The time_tag filter converts a timestamp into an HTML <time> tag:</p>
+<pre>
+<code>
+{% raw %} liquid
+{{ article.published_at | time_tag }}
+
+returns
+
+<time datetime="2016-02-24T14:47:51Z">Wed, 24 Feb 2016 09:47:51 -0500</time>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">Custom datetime <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>You can pass a datetime parameter with date parameters to use a custom format for the datetime attribute of the output time tag:</p>
+<pre>
+<code>
+	{{ article.published_at | datetime: '%b %d, %Y' }}
+
+	returns
+
+	<time datetime="Feb 24, 2016">Wed, 24 Feb 2016 09:47:51 -0500</time>
+</code>	
+</pre>
+					</div>
+				<h5 class="subtitle">Localized date format <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>You can pass a format parameter to the filter to use a date format defined in your theme's locale settings:</p>
+<pre>
+<code>
+<!-- In theme/locales / en.json -->
+"date_formats": {
+  "month_day_year": "%B %d, %Y"
+}
+
+{{ article.published_at | time_tag: format: 'month_day_year' }}
+
+returns
+
+<time datetime="2016-02-24T14:47:51Z">February 24, 2016</time>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">default <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Sets a default value for any variable with no assigned value. Can be used with strings, arrays, and hashes.</p>
+<pre>
+<code>
+Dear {{ customer.name | default: "customer" }}
+
+returns
+
+<!-- If customer.name is nil -->
+Dear customer
+
+<!-- If customer.name is "" -->
+Dear customer
+
+<!-- If customer.name is "   " -->
+Dear
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">default_errors <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Outputs default error messages for the form.errors variable. The messages returned are dependent on the strings returned by form.errors.</p>
+<pre>
+<code>
+{% if form.errors %}
+      {{ form.errors | default_errors }}
+{% endif %}
+
+returns
+
+<!-- if form.errors returned "email" -->
+Please enter a valid email address.
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">default_pagination <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Creates a set of links for paginated results. Used in conjunction with the paginate variable.</p>
+<pre>
+<code>
+{{ paginate | default_pagination }}
+
+returns
+
+<span class="page current">1</span>
+<span class="page"><a href="/collections/all?page=2" title="">2</a></span>
+<span class="page"><a href="/collections/all?page=3" title="">3</a></span>
+<span class="deco">…</span>
+<span class="page"><a href="/collections/all?page=17" title="">10</a></span>
+<span class="next"><a href="/collections/all?page=2" title="">Next »</a></span>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">format_address <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Use the format_address filter on an address to print the elements of the address in order according to their locale. The filter will only print the parts of the address that have been provided. This filter works on the addresses page for customers who have accounts in your store, or on your store's address:</p>
+<pre>
+<code>
+{{ address | format_address }}
+
+returns
+
+<p>
+  Elizabeth Gonzalez<br>
+  1507 Wayside Lane<br>
+  San Francisco<br>
+  CA<br>
+  94103<br>
+  United States
+</p>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">hex_to_rgba <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Theme settings return hexadecimal values for color settings by default. Use the hex_to_rgba filter to convert the value into RGBA. It defaults to an opacity of 1, but you can specify an opacity between 0 and 1. Shorthand hex values are accepted as well, for example, #812.</p>
+<pre>
+<code>
+.site-footer h1 {
+  color: {{ settings.color_name }};
+}
+
+.site-footer p {
+  color: {{ settings.color_name | hex_to_rgba: 0.5 }};
+}
+
+returns
+
+.site-footer h1 {
+  color: #812dd3;
+}
+
+.site-footer p {
+  color: rgba(129, 45, 211, 0.5);
+}
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">highlight <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Wraps words inside search results with an HTML "strong"</code> tag with the class highlight if it matches the submitted search.terms.</p>
+<pre>
+<code>
+{{ item.content | highlight: search.terms }}
+
+returns
+
+<strong class="highlight">Yellow</strong> shirts are the best!
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">highlight_active_tag <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Wraps a tag link in a <span> with the class active if that tag is being used to filter a collection.</p>
+<pre>
+<code>
+<!-- collection.tags = ["Cotton", "Crew Neck", "Jersey"] -->
+{% for tag in collection.tags %}
+    {{ tag | highlight_active | link_to_tag: tag }}
+{% endfor %}
+
+<a title="Show products matching tag Cotton" href="/collections/all/cotton"><span class="active">Cotton</span></a>
+<a title="Show products matching tag Crew Neck" href="/collections/all/crew-neck">Crew Neck</a>
+<a title="Show products matching tag Jersey" href="/collections/all/jersey">Jersey</a>
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">json <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Converts a string into JSON format.</p>
+<pre>
+<code>
+var content = {{ pages.page-handle.content | json }};
+
+returns
+
+var content = "\u003Cp\u003E\u003Cstrong\u003EYou made it! Congratulations on starting your own e-commerce store!\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003EThis is your shop\u0026#8217;s \u003Cstrong\u003Efrontpage\u003C/strong\u003E, and it\u0026#8217;s the first thing your customers will see when they arrive. You\u0026#8217;ll be able to organize and style this page however you like.\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003ETo get started adding products to your shop, head over to the \u003Ca href=\"/admin\"\u003EAdmin Area\u003C/a\u003E.\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003EEnjoy the software,  \u003Cbr /\u003E\nYour Shopify Team.\u003C/p\u003E";
+</code>
+</pre>
+						<p>The json filter can also used to make Liquid objects readable by JavaScript:</p>
+<pre>
+<code>
+var json_product = {{ collections.featured.products.first | json }};
+var json_cart = {{ cart | json }};
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">weight_with_unit <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Formats the product variant's weight. The weight unit is set in General Settings.</p>
+<pre>
+<code>
+{{ product.variants.first.weight | weight_with_unit }}
+
+returns
+
+24.0 kg
+</code>
+</pre>
+					</div>
+				<h5 class="subtitle">placeholder_svg_tag <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Takes a placeholder name and outputs a placeholder SVG illustration. An optional argument can be supplied to include a custom class attribute on the SVG tag.</p>
+<pre>
+<code>
+{{ 'collection-1' | placeholder_svg_tag }}
+
+returns
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 525.5 525.5">...omitted for brevity...</svg>
+</code>
+</pre>
+					</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="forms">
+		<h2 class="subtitle">Forms <span class="arrow arrow-close">►</span></h2>
+		<div class="content hide">
+			<p>Shopify has some helpers in order to make standard forms for your shop</p>
+			<h3 class="subtitle">Template Variables <span class="arrow arrow-close">►</span></h3>
+			<div class="content hide">
+				<h4 class="subtitle">Form <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">author</h5>
+					<h5 class="subtitle">body</h5>
+					<h5 class="subtitle">email</h5>
+					<h5 class="subtitle">errors</h5>
+					<h5 class="subtitle">posted_successfully?</h5>
+				</div>
+				<hr>
+			</div>
+			<h3 class="subtitle">Form Generators <span class="arrow arrow-close">►</span></h3>
+			<div class="content hide">		
+				<h4 class="subtitle">activate_customer_password <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form for activating a customer account on the activate_account.liquid template.</p>
+	<pre>
+	<code data-language="html">
+	{% for 'activate_customer_password %}
+	...
+	{% endform %}
+
+	returns
+
+	<form accept-charset="UTF-8" action="https://my-shop.myshopify.com/account/activate" method="post">
+	  <input name="form_type" type="hidden" value="activate_customer_password" />
+	  <input name="utf8" type="hidden" value="✓" />
+	  ...
+	</form>
+	</code>
+	</pre>
+				</div>
+				<h4 class="subtitle">new_comment <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form for creating a new comment in the article.liquid template. Requires the article object as a parameter.</p>
+	<pre>
+	<code data-language="html">
+	{% form 'new_comment', article %}
+	...
+	{% endform %}
+
+	returns 
+
+	<form accept-charset="UTF-8" action="/blogs/news/10582441-my-article/comments" class="comment-form" id="article-10582441-comment-form" method="post">
+	  <input name="form_type" type="hidden" value="new_comment" />
+	  <input name="utf8" type="hidden" value="✓" />
+	  ...
+	</form>
+	</code>
+	</pre>
+				</div>
+		
+				<h4 class="subtitle">contact <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form for submitting an email through the Liquid contact form.</p>
+	<pre>
+	<code data-language="html">
+	{% form 'contact' %}
+	...
+	{% endform %}
+
+	returns
+
+	<form accept-charset="UTF-8" action="/contact" class="contact-form" method="post">
+	  <input name="form_type" type="hidden" value="contact" />
+	  <input name="utf8" type="hidden" value="✓" />
+	  ...
+	</form>
+	</code>
+	</pre>
+				</div>
+				<h4 class="subtitle">customer <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form for creating a new customer without registering a new account. This form is useful for collecting customer information when you don't want customers to log in to your store, such as building a list of emails from a newsletter signup.</p>
+					<p>To generate a form that registers a customer account, use the create_customer form.</p>
+	<pre>
+	<code data-language="html">
+	{% form 'customer' %}
+	...
+	{% endform %}
+
+	returns
+
+	<form method="post" action="/contact#contact_form" id="contact_form" class="contact-form" accept-charset="UTF-8">
+	  <input type="hidden" value="customer" name="form_type">
+	  <input type="hidden" name="utf8" value="✓">
+	  ...
+	</form>
+	</code>
+	</pre>
+
+				</div>
+				<h4 class="subtitle">create_customer <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form for creating a new customer account on the register.liquid template.</p>
+	<pre>
+	<code>
+	{% form 'create_customer' %}
+	...
+	{% endform %}
+
+	returns
+
+	<form accept-charset="UTF-8" action="https://my-shop.myshopify.com/account" id="create_customer" method="post">
+	  <input name="form_type" type="hidden" value="create_customer" />
+	  <input name="utf8" type="hidden" value="✓" />
+	  ...
+	</form>
+	</code>
+	</pre>
+				</div>
+				<h4 class="subtitle">customer_address <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form for creating or editing customer account addresses on the addresses.liquid template. When creating a new address, include the parameter customer.new_address. When editing an existing address, include the parameter address.</p>
+	<pre>
+	<code data-language="html">
+	{% form 'customer_address', customer.new_address %}
+	...
+	{% endform %}
+
+	returns
+
+	<form accept-charset="UTF-8" action="/account/addresses/70359392" id="address_form_70359392" method="post">
+	  <input name="form_type" type="hidden" value="customer_address" />
+	  <input name="utf8" type="hidden" value="✓" />
+	  ...
+	</form>
+	</code>
+	</pre>
+				</div>
+				<h4 class="subtitle">customer_login <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form for logging into Customer Accounts on the login.liquid template.</p>
+	<pre>
+	<code data-language="html">
+	{% form 'customer_login' %}
+	...
+	{% endform %}
+
+	returns
+
+	<form accept-charset="UTF-8" action="https://my-shop.myshopify.com/account/login" id="customer_login" method="post">
+	  <input name="form_type" type="hidden" value="customer_login" />
+	  <input name="utf8" type="hidden" value="✓" />
+	  ...
+	</form>
+	</code>
+	</pre>
+				</div>
+				<h4 class="subtitle">guest_login <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form on the login.liquid template that directs customers back to their checkout session as a guest instead of logging in to an account.</p>
+	<pre>
+	<code data-language="html">
+	{% form 'guest_login' %}
+	...
+	{% endform %}
+
+	returns
+
+	<form method="post" action="https://my-shop.myshopify.com/account/login" id="customer_login_guest" accept-charset="UTF-8">
+	  <input type="hidden" value="guest_login" name="form_type">
+	  <input type="hidden" name="utf8" value="✓">
+	  ...
+	  <input type="hidden" name="guest" value="true">
+	  <input type="hidden" name="checkout_url" value="https://checkout.shopify.com/store-id/checkouts/session-id?step=contact_information">
+	</form>
+	</code>
+	</pre>
+				</div>
+				<h4 class="subtitle">recover_customer_password <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form for recovering a lost password on the login.liquid template.</p>
+	<pre>
+	<code data-language="html">
+	{% form 'recover_customer_password' %}
+	...
+	{% endform %}
+
+	returns
+
+	<form accept-charset="UTF-8" action="/account/recover" method="post">
+	  <input name="form_type" type="hidden" value="recover_customer_password" />
+	  <input name="utf8" type="hidden" value="✓" />
+	  ...
+	</form>
+	</code>
+	</pre>
+				</div>
+				<h4 class="subtitle">reset_customer_password <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form on the customers/reset_password.liquid template for a customer to reset their password.</p>
+	<pre>
+	<code data-language="html">
+	{% form 'reset_customer_password' %}
+	...
+	{% endform %}
+
+	returns
+
+	<form method="post" action="https://my-shop.myshopify.com/account/account/reset" accept-charset="UTF-8">
+	  <input type="hidden" value="reset_customer_password" name="form_type" />
+	  <input name="utf8" type="hidden" value="✓" />
+	  ...
+	  <input type="hidden" name="token" value="408b680ac218a77d0802457f054260b7-1452875227">
+	  <input type="hidden" name="id" value="1080844568">
+	</form>
+	</code>
+	</pre>
+				</div>
+				<h4 class="subtitle">storefront_password <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<p>Generates a form on the password.liquid template for entering a password-protected storefront.</p>
+	<pre>
+	<code data-language="html">
+	{% form 'storefront_password' %}
+	...
+	{% endform %}
+
+	returns
+
+	<form method="post" action="/password" id="login_form" class="storefront-password-form" accept-charset="UTF-8">
+	  <input type="hidden" value="storefront_password" name="form_type">
+	  <input type="hidden" name="utf8" value="✓">
+	  ...
+	</form>
+	</code>
+	</pre>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="pagination">
+		<h2 class="subtitle">Pagination <span class="arrow arrow-close">►</span></h2>
+		<div class="content hide">
+			<p>The paginate tag is built using the attributes of the paginate object. You can use the default_pagination filter as a quick and easy alternative.</p>
+<pre>
+<code data-language="html">
+{% assign collection = collections.frontpage %}
+{% paginate collection.products by 8 %}
+	<div class="clearfix margin-bottom-30">
+	  <h2>Collection: {{ collection.title }}</h2>
+	  {% for product in collection.products %}
+	    {% include 'product-loop' %}
+	  {% endfor %}
+	</div>
+
+<!-- if there are multiple pages, show pagination links -->
+{% if paginate.pages > 1 %}
+<div class="pagination text-center margin-bottom-30">
+  <p>{{ paginate | default_pagination }}</p>
+</div>
+{% endif %}
+{% endpaginate %}
+</code>
+</pre>
+			<p>This code shows the variable collection being assigned to collections.frontpage.  Then we use the paginate <strong>tag</strong> to start and declare that we want to paginate through the collection.products with 8 per page.  Below this is where we display the products using the product loop snippet.  Once that is done, we use the paginate <strong>object</strong> to check to see if there is more than one page.  If so, we use the paginate <strong>filter</strong> to set default pagination navigation. We then end the whole section with the {% endpaginate %} tag</p>
+			<h3 class="subtitle">Liquid Tag <span class="arrow arrow-close">►</span></h3>
+			<div class="content hide">
+				<p>The paginate tag works with thefor tag to split content into many pages. It must wrap a for tag block that loops through an array, as shown in the example below:</p>
+<pre>
+<code data-language="html">
+{% paginate collection.products by 8 %}
+  {% for product in collection.products %}
+    <!-- insert product loop -->
+  {% endfor %}
+{% endpaginate %}
+</code>
+</pre>
+			</div>
+			<h3 class="subtitle">Template Variable <span class="arrow arrow-close">►</span></h3>
+			<div class="content hide">
+				<h4 class="subtitle">Paginate <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">current_page</h5>
+					<h5 class="subtitle">current_offset</h5>
+					<h5 class="subtitle">items</h5>
+					<h5 class="subtitle">parts</h5>
+					<h5 class="subtitle">next</h5>
+					<h5 class="subtitle">previous</h5>
+					<h5 class="subtitle">page_size</h5>
+					<h5 class="subtitle">pages</h5>
+				</div>
+			</div>
+			<h3 class="subtitle">Liquid Filter <span class="arrow arrow-close">►</span></h3>
+			<div class="content hide">
+<pre>	
+<code>
+{{ paginate | default_pagination }}
+</code>
+</pre>
+				<p>Creates a set of links for paginated results. Used in conjunction with the paginate variable.</p>
+<pre>
+<code data-language="html">
+<span class="page current">1</span>
+<span class="page"><a href="/collections/all?page=2" title="">2</a></span>
+<span class="page"><a href="/collections/all?page=3" title="">3</a></span>
+<span class="deco">…</span>
+<span class="page"><a href="/collections/all?page=17" title="">10</a></span>
+<span class="next"><a href="/collections/all?page=2" title="">Next »</a></span>
+</code>
+</pre>
+			<p>Next and Previous are standard, but can be over ridden with arguments.</p>
+<pre>
+<code>
+{{ paginate | default_pagination: next: 'before', previous: 'after' }}
+</code>
+</pre>
 			</div>
 		</div>
 	</section>
@@ -365,7 +2481,8 @@ returns
 
 	function toggleOpen(){
 		let method = this.nextElementSibling.classList.contains('hide') ? 'remove' : 'add'
-		this.nextElementSibling.classList[method]('hide')	
+		this.nextElementSibling.classList[method]('hide')
+		this.firstElementChild.classList[method]('arrow-close')
 	}
 
 	subtitles.forEach(subtitle => subtitle.addEventListener('click', toggleOpen))

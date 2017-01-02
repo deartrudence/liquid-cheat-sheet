@@ -10,6 +10,12 @@ p {
 	font-family: monospace;
 }
 
+h4.subtitle {
+	margin-left: 20px;
+}
+h5.subtitle {
+	margin-left: 40px;
+}
 .container {
 	max-width: 1170px;
 	margin: 0 auto;
@@ -22,25 +28,30 @@ p {
 section {
 	background-color: #fafafa;
 	margin: 50px 10px;
-	padding: 15px;
+	padding: 10px 40px;
 	border: 1px solid black;
-	    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .subtitle {
-	/*border-bottom: 1px solid black;*/
 	cursor: pointer;
 }
 
-/*code {
-	background-color: #e2e2e2;
-	padding: 2px;
-}*/
 pre {
 	background-color: #e2e2e2;
 	padding: 2px;
 }
 
+.arrow {
+	display: inline-block;
+	transition: all 0.5s;
+	color: #CEF2EA;
+	transform-origin: 40%;
+	transform: rotate(-90deg);	
+}
+.arrow-close {
+	transform: rotate(90deg);	
+}
 .hide {
 	display: none;
 }

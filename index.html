@@ -253,57 +253,311 @@ Running Shoes
 				</div>
 				<h4 class="subtitle">Product <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">available</h5>
-					<h5 class="subtitle">collections</h5>
-					<h5 class="subtitle">compar_at_price_max</h5>
-					<h5 class="subtitle">compar_at_price_min</h5>
-					<h5 class="subtitle">compar_at_price_varies</h5>
-					<h5 class="subtitle">content</h5>
-					<h5 class="subtitle">description</h5>
-					<h5 class="subtitle">featured_image</h5>
-					<h5 class="subtitle">first_available_variant</h5>
-					<h5 class="subtitle">handle</h5>
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">images</h5>
-					<h5 class="subtitle">image</h5>
-					<h5 class="subtitle">options</h5>
-					<h5 class="subtitle">price</h5>
-					<h5 class="subtitle">price_max</h5>
-					<h5 class="subtitle">price_min</h5>
-					<h5 class="subtitle">price_varies</h5>
-					<h5 class="subtitle">selected_variant</h5>
-					<h5 class="subtitle">select_or_first_availble_variant</h5>
-					<h5 class="subtitle">tags</h5>
-					<h5 class="subtitle">template_suffix</h5>
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">type</h5>
-					<h5 class="subtitle">url</h5>
-					<h5 class="subtitle">variants</h5>
-					<h5 class="subtitle">vendor</h5>
+					<h5 class="subtitle">available <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if a product is available for purchase. Returns falseif all of the products variants' inventory_quantity values are zero or less, and their inventory_policy is not set to "Allow users to purchase this item, even if it is no longer in stock."</p>
+					</div>
+					<h5 class="subtitle">collections <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of all of the collections a product belongs to.</p>
+<pre>
+<code>
+{% for collection in product.collections %}
+    {{ collection.title }}
+{% endfor %}
+
+returns
+
+Sale
+Running Shoes
+Shoes
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">compar_at_price_max <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the highest compare at price. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">compar_at_price_min <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the lowest compare at price. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">compar_at_price_varies <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the compare_at_price_min is different from the compare_at_price_max. Returns false if they are the same.</p>
+					</div>
+					<h5 class="subtitle">content <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the description of the product. Alias for product.description.</p>
+					</div>
+					<h5 class="subtitle">description <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the description of the product.</p>
+					</div>
+					<h5 class="subtitle">featured_image <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the relative URL of the product's featured image.</p>
+					</div>
+					<h5 class="subtitle">first_available_variant <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant object of the first product variant that is available for purchase. In order for a variant to be available, its variant.inventory_quantity must be greater than zero or variant.inventory_policy must be set to continue. A variant with no inventory_policy is considered available.</p>
+					</div>
+					<h5 class="subtitle">handle <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the handle of a product.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of the product.</p>
+					</div>
+					<h5 class="subtitle">images <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of the product's images. Use the product_img_url filter to link to the product image on Shopify's Content Delivery Network.</p>
+
+					</div>
+					<h5 class="subtitle">image <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of the product's images. Use the product_img_url filter to link to the product image on Shopify's Content Delivery Network.</p>
+<pre>
+<code>
+{% for image in product.images %}
+    <img src="{{ image.src | product_img_url: 'medium' }}">
+{% endfor %}
+
+returns
+
+<img src="//cdn.shopify.com/s/files/1/0087/0462/products/shirt14_medium.jpeg?v=1309278311" />
+<img src="//cdn.shopify.com/s/files/1/0087/0462/products/nice_shirt_medium.jpeg?v=1331480777">
+<img src="//cdn.shopify.com/s/files/1/0087/0462/products/aloha_shirt_medium.jpeg?v=1331481001">
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">options <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of the product's option names.</p>
+<pre>
+<code>
+{% for option in product.options %}
+    {{ option }}
+{% endfor %}
+
+returns
+
+Color Size Material
+</code>
+</pre>
+				<p>Use size if you need to determine how many options a product has.</p>
+<code>
+<pre>
+{{ product.options.size }}
+
+returns
+
+3
+</pre>
+</code>
+					</div>
+					<h5 class="subtitle">options_with_values <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of the product's options including their available and currently selected values.</p>
+<pre>
+<code>
+{% for option in product.options_with_values %}
+  <label>
+    {{ option.name }}
+    <select>
+      {% for value in option.values %}
+        <option {% if option.selected_value == value %}selected{% endif %}>
+          {{ value }}
+        </option>
+      {% endfor %}
+    </select>
+  </label>
+{% endfor %}
+
+returns
+
+<label>
+  Color
+  <select>
+    <option selected>Red</option>
+    <option>Green</option>
+  </select>
+</label>
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the minimum price of all variants of the product. This is the same as  product.min_price. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">price_max <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the highest price of the product. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">price_min <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the lowest price of the product. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">price_varies <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the product's variants have varying prices. Returns false if all of the product's variants have the same price.</p>
+					</div>
+					<h5 class="subtitle">selected_variant <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant object of the currently-selected variant if there is a valid ?variant= parameter in the URL. Returns nil if there is not.</p>
+					</div>
+					<h5 class="subtitle">select_or_first_availble_variant <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant object of the currently-selected variant if there is a valid ?variant= query parameter in the URL. If there is no selected variant, the first available variant is returned. In order for a variant to be available, its variant.inventory_quantity must be greater than zero or variant.inventory_policy must be set to continue. A variant with no inventory_management is considered available.</p>
+					</div>
+					<h5 class="subtitle">tags <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of all of the product's tags. The tags are returned in alphabetical order.</p>
+<pre>
+<code>
+{% for tag in product.tags %}
+    {{ tag }}
+{% endfor %}
+
+returns
+
+new
+leather
+sale
+special
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">template_suffix <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the custom product template assigned to the product, without the product. prefix nor the .liquid suffix. Returns nil if a custom template is not assigned to the product.</p>
+<pre>
+<code>
+<!-- on product.wholesale.liquid -->
+{{ product.template_suffix }}
+
+returns
+
+wholesale
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of the product.</p>
+					</div>
+					<h5 class="subtitle">type <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the type of the product.</p>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the relative URL of the product.</p>
+					</div>
+					<h5 class="subtitle">variants <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array the product's variants.</p>
+					</div>
+					<h5 class="subtitle">vendor <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the vendor of the product.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Variant <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">available</h5>
-					<h5 class="subtitle">barcode</h5>
-					<h5 class="subtitle">compare_at_price</h5>
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">image</h5>
-					<h5 class="subtitle">inventory_management</h5>
-					<h5 class="subtitle">inventory_policy</h5>
-					<h5 class="subtitle">inventory_quantity</h5>
-					<h5 class="subtitle">option1</h5>
-					<h5 class="subtitle">option2</h5>
-					<h5 class="subtitle">option3</h5>
-					<h5 class="subtitle">price</h5>
-					<h5 class="subtitle">requires_shipping</h5>
-					<h5 class="subtitle">selected</h5>
-					<h5 class="subtitle">sku</h5>
-					<h5 class="subtitle">taxable</h5>
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">url</h5>
-					<h5 class="subtitle">weight</h5>
-					<h5 class="subtitle">weight_unit</h5>
-					<h5 class="subtitle">weight_in_unit</h5>
+					<h5 class="subtitle">available <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the variant is available for purchase, or false if it not. For a variant to be available, its variant.inventory_quantity must be greater than zero or variant.inventory_policy must be set to continue. A variant with no variant.inventory_management is also considered available.</p>
+					</div>
+					<h5 class="subtitle">barcode <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant's barcode.</p>
+					</div>
+					<h5 class="subtitle">compare_at_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant's compare at price. Use a money filter to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant's unique ID.</p>
+					</div>
+					<h5 class="subtitle">image <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the image object associated with the variant.</p>
+					</div>
+					<h5 class="subtitle">incoming <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the variant has incoming inventory.</p>
+					</div>
+					<h5 class="subtitle">inventory_management <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant's inventory tracking service.</p>
+					</div>
+					<h5 class="subtitle">inventory_policy <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the string continue if the "Allow users to purchase this item, even if it is no longer in stock." checkbox is checked in the variant options in the Admin. Returns deny if it is unchecked.</p>
+					</div>
+					<h5 class="subtitle">inventory_quantity <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant's inventory quantity.</p>
+					</div>
+					<h5 class="subtitle">next_incoming_date <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>eturns the date when the next incoming inventory will arrive.</p>
+					</div>
+					<h5 class="subtitle">option1 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the variant's first option.</p>
+					</div>
+					<h5 class="subtitle">option2 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the variant's second option.</p>
+					</div>
+					<h5 class="subtitle">option3 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the variant's third option.</p>
+					</div>
+					<h5 class="subtitle">price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant's price. Use a money filter to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">requires_shipping <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the variant is set to require shipping, or false if it does not.</p>
+					</div>
+					<h5 class="subtitle">selected <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the variant is currently selected by the ?variant= URL parameter, or false if it is not.</p>
+					</div>
+					<h5 class="subtitle">sku <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant's SKU.</p>
+					</div>
+					<h5 class="subtitle">taxable <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if taxes are charged for the variant, or false if they are not.</p>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the concatenation of all the variant's option values, joined by / characters.</p>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns a URL that is unique to only one product variant. The variant ID is used as the unique identifier.</p>
+					</div>
+					<h5 class="subtitle">weight <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant's weight in grams. Use the weight_with_unit filter to convert it to your store's weight format or the weight unit configured on the variant.</p>
+					</div>
+					<h5 class="subtitle">weight_unit <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the unit for the weight configured on the variant. Works well paired with the weight_in_unit attribute and the weight_with_unit filter.</p>
+					</div>
+					<h5 class="subtitle">weight_in_unit <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the weight of the product converted to the unit configured on the variant. Works well paired with the weight_unit attribute and the weight_with_unit filter.</p>
+					</div>
 				</div>
 				<hr>
 			</div>
@@ -311,25 +565,82 @@ Running Shoes
 			<div class="content hide">
 				<h4 class="subtitle">Shop <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">address</h5>
-					<h5 class="subtitle">collections_count</h5>
-					<h5 class="subtitle">currency</h5>
-					<h5 class="subtitle">description</h5>
-					<h5 class="subtitle">domain</h5>
-					<h5 class="subtitle">email</h5>
-					<h5 class="subtitle">enabled_payment_types</h5>
-					<h5 class="subtitle">metafields</h5>
-					<h5 class="subtitle">money_format</h5>
-					<h5 class="subtitle">money_with_currency_format</h5>
-					<h5 class="subtitle">name</h5>
-					<h5 class="subtitle">password_message</h5>
-					<h5 class="subtitle">permanent_domain</h5>
-					<h5 class="subtitle">products_count</h5>
-					<h5 class="subtitle">types</h5>
-					<h5 class="subtitle">url</h5>
-					<h5 class="subtitle">secure_url</h5>
-					<h5 class="subtitle">vendors</h5>
-					<h5 class="subtitle">locale</h5>
+					<h5 class="subtitle">address <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">collections_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">currency <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">description <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">domain <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">email <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">enabled_payment_types <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">metafields <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">money_format <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">money_with_currency_format <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">password_message <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">permanent_domain <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">products_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">types <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">secure_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">vendors <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">locale <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
 				</div>
 				<h4 class="subtitle">Blog <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">

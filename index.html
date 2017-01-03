@@ -28,24 +28,228 @@
 			<div class="content hide">
 				<h4 class="subtitle">Collection <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">all_types</h5>
-					<h5 class="subtitle">all_vendors</h5>
-					<h5 class="subtitle">current_type</h5>
-					<h5 class="subtitle">current_vendor</h5>
-					<h5 class="subtitle">default_sort_by</h5>
-					<h5 class="subtitle">description</h5>
-					<h5 class="subtitle">handle</h5>
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">image</h5>
-					<h5 class="subtitle">image.src</h5>
-					<h5 class="subtitle">next_product</h5>
-					<h5 class="subtitle">previous_product</h5>
-					<h5 class="subtitle">products</h5>
-					<h5 class="subtitle">products_count</h5>
-					<h5 class="subtitle">template_suffix</h5>
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">tags</h5>
-					<h5 class="subtitle">url</h5>
+					<h5 class="subtitle">all_types <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns a list of all the product types for a collection</p>
+<pre>
+<code>
+{% for type in collection.all_types %}
+	{{ type | link_to_type }}
+{% endfor %}
+
+returns
+
+<a href="/collections/types?q=Accessories" title="Accessories">Accessories</a>
+<a href="/collections/types?q=Chairs" title="Chairs">Chairs</a>
+<a href="/collections/types?q=Shoes" title="Shoes">Shoes</a>
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">all_products_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the number of products in a certain collection</p>
+<pre>
+<code>
+{{ collection.all_products_count }}
+
+returns
+
+42
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">all_vendors <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns a list of all the product vendors for a collection</p>
+<pre>
+<code>
+{% for vendor in collection.all_vendors %}
+	{{ vendor }}
+{% endfor %}
+
+returns
+
+Supplier Company
+Dropshipping Company
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">current_type <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the product type on a /collections/types?q=TYPE collection page. For example, an automatic "Shirts" collection lists all products of type "Shirts" in the store: </p>
+<pre>
+<code>
+{% if collection.current_type %}
+Browse all our {{ collection.current_type | downcase }}.
+{% endif %}
+
+returns
+
+Browse all our shirts.
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">current_vendor <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the product vendor on a /collections/vendores?q=VENDOR collection page. For example, an automatic "ApparelCo" collection lists all products with the vendor "ApparelCo" in the store: yourstore.myshopify.com/collections/vendors?q=ApparelCo.</p>
+<pre>
+<code>
+{% if collection.current_vendor %}
+All products by {{ collection.current_vendor }}.
+{% endif %}
+
+returns
+
+All products by ApparelCo.
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">default_sort_by <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the sort order of the collection, which is set on the collection's page in your Shopify admin.</p>
+						<p>The possible sort orders are:</p>
+						<ul>
+							<li>manual</li>
+							<li>best-selling</li>
+							<li>title-ascending</li>
+							<li>title-descending</li>
+							<li>price-ascending</li>
+							<li>price-descending</li>
+							<li>created-ascending</li>
+							<li>created-descending</li>
+						</ul>
+
+					</div>
+					<h5 class="subtitle">description <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the description of the collection.</p>
+<pre>
+<code>
+{{ collection.description }}
+
+returns
+
+This collection includes classic running shoes.
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">handle <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the collection's handle.</p>
+						<p>The handle is generally a slug of the collection title.</p>
+<pre>
+<code>
+{{ collection.handle }}
+
+returns
+
+running-shoes
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the ID number of the collection.</p>
+<pre>
+<code>
+{{ collection.id }}
+
+returns
+
+328971974
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">image <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the collection image. Use the img_url filter to load the image file from the Shopify content delivery network (CDN). Use an if tag to check for the presence of the image first.</p>
+<pre>
+<code>
+{% if collection.image %}{{ collection.image | img_url: 'medium' }}{% endif %}
+
+returns
+
+//cdn.shopify.com/s/files/1/0087/0462/collections/collection-image_medium.png?v=1337103726
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">image.src <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>???</p>
+<pre>
+<code>
+{% if collection.image %}{{ collection.image | img_url: 'medium' }}{% endif %}
+
+returns
+
+//cdn.shopify.com/s/files/1/0087/0462/collections/collection-image_medium.png?v=1337103726
+</code>
+					</div>
+					<h5 class="subtitle">next_product <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of the next product in the collection. Returns nil if there is no next product.</p>
+					</div>
+					<h5 class="subtitle">previous_product <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of the previous product in the collection. Returns nil if there is no previous product.</p>
+					</div>
+					<h5 class="subtitle">products <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns all of the products in a collection. You can show a maximum of 50 products per page.</p>
+						<p>See paginate section for more info.</p>
+					</div>
+					<h5 class="subtitle">products_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the number of products in a collection that match the current view.</p>
+<pre>
+<code>
+{{ collection.products_count }} products
+
+returns
+
+42 products
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">published_at <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the date and time when the collection was published. </p>
+					</div>
+					<h5 class="subtitle">template_suffix <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the custom collection template assigned to the collection, without the collection. prefix or the .liquid suffix. Returns nil if a custom template is not assigned to the collection.</p>
+<pre>
+<code>
+{{ collection.template_suffix }}
+
+returns
+
+no-price
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of the collection.</p>
+<pre>
+<code>
+{{ collection.title }}
+
+returns
+
+Running Shoes
+</code>
+</pre>
+
+					</div>
+					<h5 class="subtitle">tags <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the tags of products in a collection that match the current view. For example, if you are viewing a collection filtered by tag, collection.tags will return the tags for the products that match the current filter.</p>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of the collection.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Product <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">

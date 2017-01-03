@@ -567,161 +567,386 @@ wholesale
 				<div class="content hide">
 					<h5 class="subtitle">address <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>You can add attributes to shop.address to return information about a shop's address.</p>
+						<ul>
+							<li>shop.address.summary
+							<p>The summary takes the form street, city, state/province, country.</p>
+							</li>
+							<li>shop.address.street</li>
+							<li>shop.address.city</li>
+							<li>shop.address.province</li>
+							<li>shop.address.province_code</li>
+							<li>shop.address.country</li>
+							<li>shop.address.country_upper</li>
+							<li>shop.address.zip</li>
+						</ul>
 					</div>
 					<h5 class="subtitle">collections_count <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the number of collections in a shop.</p>
 					</div>
 					<h5 class="subtitle">currency <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the shop's currency in three-letter format (ex: CAD).</p>
 					</div>
 					<h5 class="subtitle">description <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the description of the shop.</p>
 					</div>
 					<h5 class="subtitle">domain <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the primary domain of the shop.</p>
 					</div>
 					<h5 class="subtitle">email <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the shop's email address.</p>
 					</div>
 					<h5 class="subtitle">enabled_payment_types <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns an array of accepted credit cards for the shop. Use the payment_type_img_url filter to link to the SVG image file of the credit card.</p>
 					</div>
 					<h5 class="subtitle">metafields <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the shop's metafields. Metafields can only be set using the Shopify API .</p>
 					</div>
 					<h5 class="subtitle">money_format <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns a string that is used by Shopify to format money without showing the currency.</p>
 					</div>
 					<h5 class="subtitle">money_with_currency_format <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns a string that is used by Shopify to format money while also displaying the currency.</p>
 					</div>
 					<h5 class="subtitle">name <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the shop's name.</p>
 					</div>
 					<h5 class="subtitle">password_message <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the shop's password page message.</p>
 					</div>
 					<h5 class="subtitle">permanent_domain <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the .myshopify.com URL of a shop.</p>
 					</div>
 					<h5 class="subtitle">products_count <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the number of products in a shop.</p>
 					</div>
 					<h5 class="subtitle">types <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns an array of all unique product types in a shop.</p>
 					</div>
 					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the full URL of a shop.</p>
 					</div>
 					<h5 class="subtitle">secure_url <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the full URL of a shop prepended by the https protocol.</p>
 					</div>
 					<h5 class="subtitle">vendors <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns an array of all unique vendors in a shop.</p>
 					</div>
 					<h5 class="subtitle">locale <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the locale that the shop is currently displayed in (ex: en, fr, pt-BR). See the documentation on theme translations for more details on this feature.</p>
 					</div>
 				</div>
 				<h4 class="subtitle">Blog <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">all_tags</h5>
-					<h5 class="subtitle">articles</h5>
-					<h5 class="subtitle">articles_count</h5>
-					<h5 class="subtitle">comments_enabled?</h5>
-					<h5 class="subtitle">handle</h5>
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">moderated?</h5>
-					<h5 class="subtitle">next-article</h5>
-					<h5 class="subtitle">previous-article</h5>
-					<h5 class="subtitle">tags</h5>
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">url</h5>
+					<h5 class="subtitle">all_tags <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns all tags of all articles of a blog. This includes tags of articles that are not in the current pagination view</p>
+					</div>
+					<h5 class="subtitle">articles <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of all articles in a blog. See this page for a list of all available attributes for article.</p>
+					</div>
+					<h5 class="subtitle">articles_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total number of articles in a blog. This total does not include hidden articles.</p>
+					</div>
+					<h5 class="subtitle">comments_enabled? <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if comments are enabled, or false if they are disabled.</p>
+					</div>
+					<h5 class="subtitle">handle <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the handle of the blog.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of the blog.</p>
+					</div>
+					<h5 class="subtitle">moderated? <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if comments are moderated, or false if they are not moderated.</p>
+					</div>
+					<h5 class="subtitle">next_article <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of the next (older) post. Returns false if there is no next article.</p>
+					</div>
+					<h5 class="subtitle">previous_article <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of the previous (newer) post. Returns false if there is no next article.</p>
+					</div>
+					<h5 class="subtitle">tags <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns all tags in a blog. Similar to all_tags, but only returns tags of articles that are in the filtered view.</p>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of the blog.</p>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the relative URL of the blog.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Article <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">author</h5>
-					<h5 class="subtitle">comments</h5>
-					<h5 class="subtitle">comments_count</h5>
-					<h5 class="subtitle">comments_enabled?</h5>
-					<h5 class="subtitle">comment_post_url</h5>
-					<h5 class="subtitle">content</h5>
-					<h5 class="subtitle">created_at</h5>
-					<h5 class="subtitle">excerpt</h5>
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">image</h5>
-					<h5 class="subtitle">image.src</h5>
-					<h5 class="subtitle">moderated?</h5>
-					<h5 class="subtitle">published_at</h5>
-					<h5 class="subtitle">tags</h5>
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">url</h5>
-					<h5 class="subtitle">user.account_owner</h5>
-					<h5 class="subtitle">user.bio</h5>
-					<h5 class="subtitle">user.first_name</h5>
-					<h5 class="subtitle">user.last_name</h5>
-					<h5 class="subtitle">user.homepage</h5>
+					<h5 class="subtitle">author <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the full name of the article's author.</p>
+					</div>
+					<h5 class="subtitle">comments <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the published comments of an article. Returns an empty array if comments are disabled.</p>
+					</div>
+					<h5 class="subtitle">comments_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the number of published comments for an article.</p>
+					</div>
+					<h5 class="subtitle">comments_enabled? <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if comments are enabled. Returns false if comments are disabled.</p>
+					</div>
+					<h5 class="subtitle">comment_post_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the relative URL where POST requests are sent to when creating new comments.</p>
+					</div>
+					<h5 class="subtitle">content <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the content of an article.</p>
+					</div>
+					<h5 class="subtitle">created_at <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the timestamp of when an article was created. Use the date filter to format the timestamp</p>
+					</div>
+					<h5 class="subtitle">excerpt <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the excerpt of an article.</p>
+					</div>
+					<h5 class="subtitle">excerpt_or_content <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns article.excerpt of an article if it exists. Returns article.content if an excerpt does not exist for the article.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of an article.</p>
+					</div>
+					<h5 class="subtitle">image <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the article image. Use the img_url filter to link it to the image file on the Shopify CDN. Check for the presence of the image first.</p>
+					</div>
+					<h5 class="subtitle">image.src <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the relative URL to the article image.</p>
+					</div>
+					<h5 class="subtitle">moderated? <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the blog that the article belongs to is set to moderate comments. Returns false if the blog is not moderated.</p>
+					</div>
+					<h5 class="subtitle">published_at <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the date/time when an article was published. Use the date filter to format the timestamp.</p>
+					</div>
+					<h5 class="subtitle">tags <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns all the tags for an article.</p>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of an article.</p>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the relative URL of the article.</p>
+					</div>
+					<h5 class="subtitle">user.account_owner <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns "true" if the author of the article is the account owner of the shop. Returns "false" if the author is not the account owner.</p>
+					</div>
+					<h5 class="subtitle">user.bio <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the bio of the author of an article. This is entered through the Staff members options on the Account page.</p>
+					</div>
+					<h5 class="subtitle">user.email <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the email of the author of an article. This is entered through the Staff members options on the Account page.</p>
+					</div>
+					<h5 class="subtitle">user.first_name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the first name of the author of an article. This is entered through the Staff members options on the Account page.</p>
+					</div>
+					<h5 class="subtitle">user.last_name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the last name of the author of an article. This is entered through the Staff members options on the Account page.</p>
+					</div>
+					<h5 class="subtitle">user.homepage <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the homepage of the author of an article. This is entered through the Staff members options on the Account page.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Comment <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p><Returns the id (unique identifier) of the comment./p>
+					</div>
 					<h5 class="subtitle">author</h5>
-					<h5 class="subtitle">email</h5>
-					<h5 class="subtitle">content</h5>
-					<h5 class="subtitle">status</h5>
-					<h5 class="subtitle">url</h5>
+					<div class="content hide">
+						<p>Returns the author of the comment.</p>
+					</div>
+					<h5 class="subtitle">email <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the e-mail address of the comment's author.</p>
+					</div>
+					<h5 class="subtitle">content <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the content of the comment.</p>
+					</div>
+					<h5 class="subtitle">status <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the status of the comment. The possible values are:</p>
+						<ul>
+							<li>unapproved</li>
+							<li>published</li>
+							<li>removed</li>
+							<li>spam</li>
+						</ul>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of the article with comment.id appended to it. This is so the page will automatically scroll to the comment.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Page <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">author</h5>
-					<h5 class="subtitle">content</h5>
-					<h5 class="subtitle">handle</h5>
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">published_at</h5>
-					<h5 class="subtitle">template_suffix</h5>
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">url</h5>
+					<h5 class="subtitle">author <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the author of a page.</p>
+					</div>
+					<h5 class="subtitle">content <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the content of a page.</p>
+					</div>
+					<h5 class="subtitle">handle <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the handle of the page.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of the page.</p>
+					</div>
+					<h5 class="subtitle">published_at <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the timestamp of when the page was created. Use the date filter to format the timestamp.</p>
+					</div>
+					<h5 class="subtitle">template_suffix <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the custom page template assigned to the page, without the page. prefix nor the .liquid suffix. Returns nil if a custom template is not assigned to the page.</p>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of a page.</p>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the relative URL of the page.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Linklist <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">handle</h5>
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">links</h5>
-					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">handle <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the handle of the linklist.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of the linklist.</p>
+					</div>
+					<h5 class="subtitle">links <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of links in the linklist.</p>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of the linklist.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Link <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">active</h5>
-					<h5 class="subtitle">object</h5>
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">type</h5>
-					<h5 class="subtitle">url</h5>
+					<h5 class="subtitle">active <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the link is active, or false if the link is inactive.</p>
+					</div>
+					<h5 class="subtitle">object <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variable associated to the link. The possible types are:</p>
+						<ul>
+							<li>product</li>
+							<li>collection</li>
+							<li>page</li>
+							<li>blog</li>
+						</ul>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of the link.</p>
+					</div>
+					<h5 class="subtitle">type <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the type of the link. The possible values are:</p>
+						<ul>
+							<li>collection_link: if the link points to a collection</li>
+							<li>product_link: if the link points to a product page</li>
+							<li>page_link: if the link points to a page</li>
+							<li>blog_link: if the link points to a blog</li>
+							<li>relative_link: if the link points to the search page, the home page or /collections/all</li>
+							<li>http_link: if the link points to an external web page, or a type or vendor collection (ex: /collections/types?q=Pants)</li>
+						</ul>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of the link.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Search <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">performed</h5>
-					<h5 class="subtitle">results</h5>
-					<h5 class="subtitle">results_count</h5>
-					<h5 class="subtitle">terms</h5>
+					<h5 class="subtitle">performed <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if an HTML form with the attribute action="/search" was submitted successfully. This allows you to show content based on whether a search was performed or not.</p>
+					</div>
+					<h5 class="subtitle">results <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of matching search result items. The items in the array can be a(n):</p>
+						<ul>
+							<li>product</li>
+							<li>article</li>
+							<li>page</li>
+						</ul>
+					</div>
+					<h5 class="subtitle">results_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the number of results found.</p>
+					</div>
+					<h5 class="subtitle">terms <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the string that was entered in the search input box. Use the highlight filter to apply a different style to any instances in the search results that match up with search.terms.</p>
+					</div>
 				</div>
 				<hr>
 			</div>
@@ -729,20 +954,62 @@ wholesale
 			<div class="content hide">
 				<h4 class="subtitle">Customer Address <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">first_name</h5>
-					<h5 class="subtitle">last_name</h5>
-					<h5 class="subtitle">address1</h5>
-					<h5 class="subtitle">address2</h5>
-					<h5 class="subtitle">street</h5>
-					<h5 class="subtitle">company</h5>
-					<h5 class="subtitle">city</h5>
-					<h5 class="subtitle">province</h5>
-					<h5 class="subtitle">province_code</h5>
-					<h5 class="subtitle">zip</h5>
-					<h5 class="subtitle">country</h5>
-					<h5 class="subtitle">country_code</h5>
-					<h5 class="subtitle">phone</h5>
-					<h5 class="subtitle">id</h5>
+					<h5 class="subtitle">first_name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the First Name field of the address.</p>
+					</div>
+					<h5 class="subtitle">last_name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Last Name field of the address.</p>
+					</div>
+					<h5 class="subtitle">address1 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Address1 field of the address.</p>
+					</div>
+					<h5 class="subtitle">address2 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Address2 field of the address.</p>
+					</div>
+					<h5 class="subtitle">street <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the combined values of the Address1 and Address2 fields of the address.</p>
+					</div>
+					<h5 class="subtitle">company <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Company field of the address.</p>
+					</div>
+					<h5 class="subtitle">city <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the City field of the address.</p>
+					</div>
+					<h5 class="subtitle">province <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Province/State field of the address.</p>
+					</div>
+					<h5 class="subtitle">province_code <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the abbreviated value of the Province/State field of the address.</p>
+					</div>
+					<h5 class="subtitle">zip <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Postal/Zip field of the address.</p>
+					</div>
+					<h5 class="subtitle">country <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Country field of the address.</p>
+					</div>
+					<h5 class="subtitle">country_code <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Country field of the address in ISO 3166-2 standard format.</p>
+					</div>
+					<h5 class="subtitle">phone <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Phone field of the address.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of customer address.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Customer <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">

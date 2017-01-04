@@ -5,6 +5,7 @@
 	<title>Liquid Cheat Sheet</title>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="solarized-light.css">
+	<script src="https://use.fontawesome.com/b558d5785a.js"></script>
 	<script src="rainbow.min.js"></script>
 	<script src="generic.js"></script>
 </head>
@@ -14,6 +15,8 @@
 		<h1>🍍 Liquid Cheat Sheet 🍍</h1>
 		<div class="content">
 			<p>Liquid is an open-source template language created by Shopify and written in Ruby. It is the backbone of Shopify themes and is used to load dynamic content on storefronts.</p>
+			<a href="https://twitter.com/up_at_five" class="social" target="_blank"><i class="fa fa-twitter"></i> follow</a>
+			<a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Liquid%20Quick%20Ref&amp;hashtags=liquidquickref,codeshopify" class="social" target="_blank"><i class="fa fa-twitter"></i> share</a>
 		</div>
 		
 	</section>
@@ -1013,59 +1016,214 @@ wholesale
 				</div>
 				<h4 class="subtitle">Customer <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">accepts_marketing</h5>
-					<h5 class="subtitle">addresses</h5>
-					<h5 class="subtitle">addresses_count</h5>
-					<h5 class="subtitle">default_address</h5>
-					<h5 class="subtitle">email</h5>
-					<h5 class="subtitle">first_name</h5>
-					<h5 class="subtitle">has_account</h5>
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">last_name</h5>
-					<h5 class="subtitle">last_order</h5>
-					<h5 class="subtitle">name</h5>
-					<h5 class="subtitle">orders</h5>
-					<h5 class="subtitle">orders_count</h5>
-					<h5 class="subtitle">tags</h5>
-					<h5 class="subtitle">total_spent</h5>
+					<h5 class="subtitle">accepts_marketing <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the customer accepts marketing, returns false if the customer does not.</p>
+					</div>
+					<h5 class="subtitle">addresses <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of all addresses associated with a customer. See customer_address for a full list of available attributes.</p>
+					</div>
+					<h5 class="subtitle">addresses_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the number of addresses associated with a customer.</p>
+					</div>
+					<h5 class="subtitle">default_address <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the default customer_address.</p>
+					</div>
+					<h5 class="subtitle">email <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the email address of the customer.</p>
+					</div>
+					<h5 class="subtitle">first_name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the first name of the customer.</p>
+					</div>
+					<h5 class="subtitle">has_account <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the email associated with an order is also tied to a customer account. Returns false if it is not. Helpful in email templates. In the theme, that will always be true.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of the customer.</p>
+					</div>
+					<h5 class="subtitle">last_name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the last name of the customer.</p>
+					</div>
+					<h5 class="subtitle">last_order <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the last order placed by the customer, not including test orders.</p>
+					</div>
+					<h5 class="subtitle">name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the full name of the customer.</p>
+					</div>
+					<h5 class="subtitle">orders <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of all orders placed by the customer.</p>
+					</div>
+					<h5 class="subtitle">orders_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total number of orders a customer has placed.</p>
+					</div>
+					<h5 class="subtitle">tags <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the list of tags associated with the customer.</p>
+					</div>
+					<h5 class="subtitle">total_spent <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total amount spent on all orders.</p>
+					</div>
 					
 				</div>
 				<h4 class="subtitle">Order <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">billing_address</h5>
-					<h5 class="subtitle">cancelled</h5>
-					<h5 class="subtitle">cancelled_at</h5>
-					<h5 class="subtitle">cancel_reason</h5>
-					<h5 class="subtitle">cancel_reason_label</h5>
-					<h5 class="subtitle">create_at</h5>
-					<h5 class="subtitle">customer</h5>
-					<h5 class="subtitle">customer_url</h5>
-					<h5 class="subtitle">discounts</h5>
-					<h5 class="subtitle">email</h5>
-					<h5 class="subtitle">financial_status</h5>
-					<h5 class="subtitle">financial_status_label</h5>
-					<h5 class="subtitle">fulfillment_status</h5>
-					<h5 class="subtitle">fulfillment_status_label</h5>
-					<h5 class="subtitle">line_items</h5>
-					<h5 class="subtitle">location</h5>
-					<h5 class="subtitle">order_status_url</h5>
-					<h5 class="subtitle">name</h5>
-					<h5 class="subtitle">note</h5>
-					<h5 class="subtitle">order_number</h5>
-					<h5 class="subtitle">shipping_address</h5>
-					<h5 class="subtitle">shipping_methods</h5>
-					<h5 class="subtitle">shipping_price</h5>
-					<h5 class="subtitle">subtotal_price</h5>
-					<h5 class="subtitle">tax_lines</h5>
-					<h5 class="subtitle">tax_price</h5>
-					<h5 class="subtitle">total_price</h5>
-					<h5 class="subtitle">transactions</h5>
+					<h5 class="subtitle">billing_address <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the billing address of the order.</p>
+					</div>
+					<h5 class="subtitle">cancelled <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if an order is canceled, or false if it is not.</p>
+					</div>
+					<h5 class="subtitle">cancelled_at <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the timestamp of when an order was canceled. Use the date filter to format the timestamp.</p>
+					</div>
+					<h5 class="subtitle">cancel_reason <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns one of the following cancellation reasons, if an order was canceled:</p>
+						<ul>
+							<li>items unavailable</li>
+							<li>fraudulent order</li>
+							<li>customer changed/cancelled order</li>
+							<li>other</li>
+						</ul>
+					</div>
+					<h5 class="subtitle">cancel_reason_label <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the translated output of an order's order.cancel_reason.</p>
+					</div>
+					<h5 class="subtitle">create_at <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the timestamp of when an order was created. Use the date filter to format the timestamp.</p>
+					</div>
+					<h5 class="subtitle">customer <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the customer associated with the order.</p>
+					</div>
+					<h5 class="subtitle">customer_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL of the customer's account page.</p>
+					</div>
+					<h5 class="subtitle">discounts <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of discounts for an order.</p>
+					</div>
+					<h5 class="subtitle">email <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the email address associated with an order.</p>
+					</div>
+					<h5 class="subtitle">financial_status <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the financial status of an order. The possible values are:</p>
+						<ul>
+							<li>pending</li>
+							<li>authorized</li>
+							<li>paid</li>
+							<li>partially_paid</li>
+							<li>refunded</li>
+							<li>partially_refunded</li>
+							<li>voided</li>
+						</ul>
+					</div>
+					<h5 class="subtitle">financial_status_label <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the translated output of an order's financial_status.</p>
+					</div>
+					<h5 class="subtitle">fulfillment_status <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the fulfillment status of an order.</p>
+					</div>
+					<h5 class="subtitle">fulfillment_status_label <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the translated output of an order's fulfillment_status.</p>
+					</div>
+					<h5 class="subtitle">line_items <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of line items for the order.</p>
+					</div>
+					<h5 class="subtitle">location <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>(POS only) Returns the physical location of the order. You can configure locations in the Locations settings of your Shopify admin.</p>
+					</div>
+					<h5 class="subtitle">order_status_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the order in the format set in the Standards and formats section of the General settings of your Shopify admin.</p>
+					</div>
+					<h5 class="subtitle">note <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the note associated with a customer order.</p>
+					</div>
+					<h5 class="subtitle">order_number <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the integer representation of the order name.</p>
+					</div>
+					<h5 class="subtitle">shipping_address <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the shipping address of the order.</p>
+					</div>
+					<h5 class="subtitle">shipping_methods <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of shipping_method variables from the order.</p>
+					</div>
+					<h5 class="subtitle">shipping_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the shipping price of an order. Use a money filter to show the result as a monetary amount.</p>
+					</div>
+					<h5 class="subtitle">subtotal_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the subtotal price of an order. Use a money filter to show the result as a monetary amount.</p>
+					</div>
+					<h5 class="subtitle">tax_lines <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of tax_line variables for an order.</p>
+					</div>
+					<h5 class="subtitle">tax_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the order's tax price. Use a money filter to show the result as a monetary amount.</p>
+					</div>
+					<h5 class="subtitle">total_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total price of an order. Use a money filter to show the result as a monetary amount.</p>
+					</div>
+					<h5 class="subtitle">transactions <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of transactions from the order.</p>
+					</div>
+					<h5 class="subtitle">tags <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of all of the order's tags. The tags are returned in alphabetical order.</p>
+					</div>
 				</div>
+
+
 				<h4 class="subtitle">Theme <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">role</h5>
-					<h5 class="subtitle">name</h5>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the theme's ID. This is useful for when you want to link a user directly to the theme's Customize theme page.</p>
+					</div>
+					<h5 class="subtitle">name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the theme.</p>
+					</div>
 				</div>
 			<hr>
 			</div>
@@ -1073,91 +1231,338 @@ wholesale
 			<div class="content hide">
 				<h4 class="subtitle">Cart <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">attributes</h5>
-					<h5 class="subtitle">item_count</h5>
-					<h5 class="subtitle">items</h5>
-					<h5 class="subtitle">note</h5>
-					<h5 class="subtitle">total_price</h5>
-					<h5 class="subtitle">total_weight</h5>
+					<h5 class="subtitle">attributes <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>cart.attributes allow the capturing of more information on the cart page. This is done by giving an input a nameattribute with the following syntax:</p>
+<pre>
+<code>
+attributes[attribute-name]
+
+<label>What is your Pet's name?</label>
+<input type="text" name="attributes[your-pet-name]" value="{{ cart.attributes.your-pet-name }}" />
+
+cart.attributes can be accessed in order email templates, the order status page of the checkout, as well as in apps such as Order Printer.
+
+{{ attributes.your-pet-name }}
+
+returns
+
+Haku
+</code>
+</pre>
+					</div>
+					<h5 class="subtitle">item_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the number of items inside the cart.</p>
+					</div>
+					<h5 class="subtitle">items <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns all of the line items in the cart.</p>
+					</div>
+					<h5 class="subtitle">note <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>cart.note allows the capturing of more information on the cart page.This is done by submitting the cart form with an HTML textarea and wrapping the cart.note output.</p>
+<pre>
+<code>
+<label>Gift note:</label>
+<textarea rows="100" cols="20">{{ cart.note }}</textarea>
+</code>
+</pre>
+						<p>NOTE: There can only be one instance of {{ cart.note }} on the cart page. If there are multiple instances, the one that comes latest in the Document Object Model (DOM) will be submitted with the form.</p>
+					</div>
+					<h5 class="subtitle">original_total_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the original total of the cart before discounts were applied.</p>
+					</div>
+					<h5 class="subtitle">total_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total price of all of the items in the cart.</p>
+					</div>
+					<h5 class="subtitle">total_weight <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total weight of all of the items in the cart.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Checkout <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">applied_gift_cards</h5>
-					<h5 class="subtitle">attributes</h5>
-					<h5 class="subtitle">billing_address</h5>
-					<h5 class="subtitle">buyer_accepts_marketing</h5>
+					<h5 class="subtitle">applied_gift_cards <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the gift cards applied to the checkout.</p>
+					</div>
+					<h5 class="subtitle">attributes <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the attributes of the checkout, that were captured in the cart.</p>
+					</div>
+					<h5 class="subtitle">billing_address <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the billing address of the checkout.</p>
+					</div>
+					<h5 class="subtitle">buyer_accepts_marketing <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns whether the buyer accepted the newsletter during the checkout.</p>
+					</div>
 					<h5 class="subtitle">discounts</h5>
-					<h5 class="subtitle">discounts_amount</h5>
-					<h5 class="subtitle">discount_savings</h5>
-					<h5 class="subtitle">email</h5>
-					<h5 class="subtitle">gift_cards_amount</h5>
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">line_items</h5>
-					<h5 class="subtitle">name</h5>
-					<h5 class="subtitle">note</h5>
-					<h5 class="subtitle">order</h5>
-					<h5 class="subtitle">order_id</h5>
-					<h5 class="subtitle">order_name</h5>
-					<h5 class="subtitle">order_number</h5>
-					<h5 class="subtitle">requires_shipping</h5>
-					<h5 class="subtitle">shipping_address</h5>
-					<h5 class="subtitle">shipping_method</h5>
-					<h5 class="subtitle">shipping_methods</h5>
-					<h5 class="subtitle">shipping_price</h5>
-					<h5 class="subtitle">subtotal_price</h5>
-					<h5 class="subtitle">tax_lines</h5>
-					<h5 class="subtitle">tax_price</h5>
-					<h5 class="subtitle">total_price</h5>
-					<h5 class="subtitle">transactions</h5>
+					<div class="content hide">
+						<p>Returns the discounts applied to the checkout.</p>
+					</div>
+					<h5 class="subtitle">discounts_amount <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the sum of the amount of the discounts applied to the checkout. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">discount_savings <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the sum of the savings of the discounts applied to the checkout. The negative opposite of discounts_amount. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">email <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the email used during the checkout.</p>
+					</div>
+					<h5 class="subtitle">gift_cards_amount <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the amount paid in gift cards of the checkout. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of the checkout.</p>
+					</div>
+					<h5 class="subtitle">line_items <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns all the line items of the checkout.</p>
+					</div>
+					<h5 class="subtitle">name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the checkout. This value is identical to checkout.id with a hash prepended to it.</p>
+					</div>
+					<h5 class="subtitle">note <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the note of the checkout.</p>
+					</div>
+					<h5 class="subtitle">order <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the order created by the checkout. Depending on the payment gateway, the order might not have been created yet on the checkout order status page and this property could be nil.</p>
+					</div>
+					<h5 class="subtitle">order_id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of the order created by the checkout. Depending on the payment gateway, the order might not have been created yet on the checkout order status page.</p>
+					</div>
+					<h5 class="subtitle">order_name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the order created by the checkout. Depending on the payment gateway, the order might not have been created yet on the checkout order status page.</p>
+					</div>
+					<h5 class="subtitle">order_number <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the number of the order created by the checkout. Depending on the payment gateway, the order might not have been created yet on the checkout order status page.</p>
+					</div>
+					<h5 class="subtitle">requires_shipping <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns whether the checkout as a whole requires shipping, that is whether any of the line items require shipping.</p>
+					</div>
+					<h5 class="subtitle">shipping_address <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the shipping address of the checkout.</p>
+					</div>
+					<h5 class="subtitle">shipping_method <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the shipping method of the checkout.</p>
+					</div>
+					<h5 class="subtitle">shipping_methods <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of shipping methods of the checkout.</p>
+					</div>
+					<h5 class="subtitle">shipping_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the shipping price of the checkout. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">subtotal_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the sum of the the cart's line-item prices after any line-item discount or cart discount has been deducted. The subtotal doesn't include taxes (unless taxes are included in the prices) or shipping costs.</p>
+					</div>
+					<h5 class="subtitle">tax_lines <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns all the tax lines of the checkout.</p>
+					</div>
+					<h5 class="subtitle">tax_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the tax price of the checkout, whether the taxes are included or not in the prices. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">total_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total price of the checkout. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">transactions <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of transactions from the checkout.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Address <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">name</h5>
-					<h5 class="subtitle">first_name</h5>
-					<h5 class="subtitle">last_name</h5>
-					<h5 class="subtitle">address1</h5>
-					<h5 class="subtitle">address2</h5>
-					<h5 class="subtitle">street</h5>
-					<h5 class="subtitle">company</h5>
-					<h5 class="subtitle">city</h5>
-					<h5 class="subtitle">province</h5>
-					<h5 class="subtitle">province_code</h5>
-					<h5 class="subtitle">zip</h5>
-					<h5 class="subtitle">country</h5>
-					<h5 class="subtitle">country_code</h5>
-					<h5 class="subtitle">phone</h5>
+					<h5 class="subtitle">name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the values of the First Name and Last Name fields of the address.</p>
+					</div>
+					<h5 class="subtitle">first_name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the First Name field of the address.</p>
+					</div>
+					<h5 class="subtitle">last_name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Last Name field of the address.</p>
+					</div>
+					<h5 class="subtitle">address1 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Address1 field of the address.</p>
+					</div>
+					<h5 class="subtitle">address2 <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Address2 field of the address.</p>
+					</div>
+					<h5 class="subtitle">street <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the combined values of the Address1 and Address2 fields of the address.</p>
+					</div>
+					<h5 class="subtitle">company <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Company field of the address.</p>
+					</div>
+					<h5 class="subtitle">city <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the City field of the address.</p>
+					</div>
+					<h5 class="subtitle">province <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Province/State field of the address.</p>
+					</div>
+					<h5 class="subtitle">province_code <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the abbreviated value of the Province/State field of the address.</p>
+					</div>
+					<h5 class="subtitle">zip <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Postal/Zip field of the address.</p>
+					</div>
+					<h5 class="subtitle">country <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Country field of the address.</p>
+					</div>
+					<h5 class="subtitle">country_code <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Country field of the address in ISO 3166-2 standard format.</p>
+					</div>
+					<h5 class="subtitle">phone <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the value of the Phone field of the address.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Discount <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">code</h5>
-					<h5 class="subtitle">amount</h5>
-					<h5 class="subtitle">total_amount</h5>
-					<h5 class="subtitle">savings</h5>
-					<h5 class="subtitle">total_savings</h5>
-					<h5 class="subtitle">type</h5>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the id of the discount.</p>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title or discount code of the discount.</p>
+					</div>
+					<h5 class="subtitle">code <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title or discount code of the discount. Same as discount.title.</p>
+					</div>
+					<h5 class="subtitle">amount <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the amount of the discount. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">total_amount <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total amount of the discount if it has been applied to multiple line items. Use a money filter to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">savings <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the amount of the discount's savings. The negative opposite of amount. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">total_savings <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total amount of the discount's savings if it has been applied to multiple line items. The negative opposite of total_amount. Use a money filter to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">type <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the type of the discount. The possible values of discount.type are:</p>
+						<ul>
+							<li>FixedAmountDiscount</li>
+							<li>PercentageDiscount</li>
+							<li>ShippingDiscount</li>
+						</ul>
+					</div>
 				</div>
 				<h4 class="subtitle">Fulfillment <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">tracking_company</h5>
-					<h5 class="subtitle">tracking_number</h5>
-					<h5 class="subtitle">tracking_url</h5>
-					<h5 class="subtitle">fulfillment_line_items</h5>
-					<h5 class="subtitle">item_count</h5>
+					<h5 class="subtitle">tracking_company <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the fulfillment service.</p>
+					</div>
+					<h5 class="subtitle">tracking_number <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns a fulfillment's tracking number, if it exists.</p>
+					</div>
+					<h5 class="subtitle">tracking_url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the URL for a tracking number.</p>
+					</div>
+					<h5 class="subtitle">fulfillment_line_items <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of all line items and their quantity included in the fulfillment. Any line items that have already been fulfilled, or are yet to be fulfilled, will not be included in the array.</p>
+					</div>
+					<h5 class="subtitle">item_count <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total number of items included in the fulfillment.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Gift Card <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">balance</h5>
-					<h5 class="subtitle">card_code</h5>
-					<h5 class="subtitle">currency</h5>
-					<h5 class="subtitle">customer</h5>
-					<h5 class="subtitle">enabled</h5>
-					<h5 class="subtitle">expired</h5>
-					<h5 class="subtitle">expires_on</h5>
-					<h5 class="subtitle">initial_value</h5>
-					<h5 class="subtitle">properties</h5>
-					<h5 class="subtitle">url</h5>
+					<p>The gift_card object can be accessed in the following templates:</p>
+					<ol>
+						<li>The gift_card object can be accessed in the following templates:</li>
+						<li>The gift_card.liquid template.</li>
+					</ol>
+					<h5 class="subtitle">balance <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					 <span class="arrow arrow-close">►</span><h5 c
+					 <div class="content hide">
+					 	<p></p>
+					 </div>lass="subtitle">card_code</h5>
+					<h5 class="subtitle">currency <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">customer <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">enabled <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">expired <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">expires_on <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">initial_value <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">properties <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
 				</div>
 				<h4 class="subtitle">Line Item <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">

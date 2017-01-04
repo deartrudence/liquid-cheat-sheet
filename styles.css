@@ -55,3 +55,16 @@ pre {
 .hide {
 	display: none;
 }
+
+.social {
+	color: #333;
+	text-decoration: none;
+}
+
+.social:last-child {
+	margin-left: 15px;
+}
+
+.social:hover {
+	color: #92e2d0;
+}

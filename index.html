@@ -1525,139 +1525,341 @@ Haku
 					</ol>
 					<h5 class="subtitle">balance <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the amount of money remaining on the gift card.</p>
 					</div>
-					 <span class="arrow arrow-close">►</span><h5 c
-					 <div class="content hide">
-					 	<p></p>
-					 </div>lass="subtitle">card_code</h5>
+					<h5 class="subtitle">code <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the code that was used to redeem the gift card.</p>
+					</div>
+					 
 					<h5 class="subtitle">currency <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the currency that the card was issued in.</p>
 					</div>
 					<h5 class="subtitle">customer <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the customer variable of the customer that the gift card is assigned to.</p>
 					</div>
 					<h5 class="subtitle">enabled <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns true if the card is enabled, or false if the card is disabled.</p>
 					</div>
 					<h5 class="subtitle">expired <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns true if the card is expired, or false if the card is not.</p>
 					</div>
 					<h5 class="subtitle">expires_on <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the expiration date of the gift card</p>
 					</div>
 					<h5 class="subtitle">initial_value <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the initial amount of money on the gift card.</p>
 					</div>
 					<h5 class="subtitle">properties <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the line item properties assigned to the gift card when it was added to the cart.</p>
 					</div>
 					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
 					<div class="content hide">
-						<p></p>
+						<p>Returns the unique URL that links to the gift card's page on the shop (rendered through gift_card.liquid).</p>
 					</div>
 				</div>
 				<h4 class="subtitle">Line Item <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">fulfillment</h5>
-					<h5 class="subtitle">grams</h5>
-					<h5 class="subtitle">key</h5>
-					<h5 class="subtitle">id(deprecated)</h5>
-					<h5 class="subtitle">image</h5>
-					<h5 class="subtitle">line_price</h5>
-					<h5 class="subtitle">price</h5>
-					<h5 class="subtitle">product</h5>
-					<h5 class="subtitle">product_id</h5>
-					<h5 class="subtitle">properties</h5>
-					<h5 class="subtitle">quantity</h5>
-					<h5 class="subtitle">requires_shipping</h5>
-					<h5 class="subtitle">sku</h5>
-					<h5 class="subtitle">taxable</h5>
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">type</h5>
-					<h5 class="subtitle">url</h5>
-					<h5 class="subtitle">variant</h5>
-					<h5 class="subtitle">variant_id</h5>
-					<h5 class="subtitle">vendor</h5>
+					<p>A line_item represents a single line in the shopping cart. There is one line item for each distinct product variant in the cart.</p>
+					<p>he line_item object can be accessed in all Liquid templates via cart.items, in notification email templates via line_items, on the order status page of the checkout, as well as in apps such as Order Printer.</p>
+					<p>The line_item object has the following attributes:</p>
+					<h5 class="subtitle">discounts <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns any discounts that scripts have applied to the line item. Only has a value if you are using the Script Editor app.</p>
+					</div>
+					<h5 class="subtitle">fulfillment <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the fulfillment of the line item.</p>
+					</div>
+					<h5 class="subtitle">fulfillment_service <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the fulfillment service associated with the line item's variant. Line items that have no fulfillment service will return manual.</p>
+					</div>
+					<h5 class="subtitle">gift_card <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the line item's product is a gift card, or false if it is not.</p>
+					</div>
+					<h5 class="subtitle">grams <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the weight of the line item. Use the weight_with_unit filter to format the weight.</p>
+					</div>
+					<h5 class="subtitle">image <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the line item's image.</p>
+						<p>You can apply the img_url filter directly to the line item instead of its image attribute. This will generate a working image URL for any object with an image attribute (variant, product, line item, collection), image object, or image src. This is useful for line items, since it will output the item's variant image or the product's featured image if no variant image exists.</p>
+					</div>
+					<h5 class="subtitle">key <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the line item key, a unique identifier for the line item. The line item key is constructed from the line item's variant ID plus a hash of the line item's properties, even if the item has no additional properties.</p>
+					</div>
+					<h5 class="subtitle">line_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the combined price of all the items in the line_item. This is equal to line_item.price times line_item.quantity.</p>
+					</div>
+					<h5 class="subtitle">message <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the discount message if a script has applied a discount to the line item. Only has a value if you are using the Script Editor app.</p>
+					</div>
+					<h5 class="subtitle">oriignal_line_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the original price of the line item before discounts were applied. Only has a value if you are using the Script Editor app.</p>
+					</div><h5 class="subtitle">original_price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the original price of the line item before discounts were applied. Only has a value if you are using the Script Editor app.</p>
+					</div><h5 class="subtitle">price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the price of the line item's variant.</p>
+					</div>
+					<h5 class="subtitle">product <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the product of the line item.</p>
+					</div>
+					<h5 class="subtitle">product_id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the ID of the line item's product.</p>
+					</div>
+					<h5 class="subtitle">properties <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns an array of custom information for an item that has been added to the cart.</p>
+					</div>
+					<h5 class="subtitle">quantity <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the quantity of the line item.</p>
+					</div>
+					<h5 class="subtitle">requires_shipping <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if the variant of the line item requires shipping, or false if it does not.</p>
+					</div>
+					<h5 class="subtitle">sku <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the SKU (stock keeping unit) of the line item's variant.</p>
+					</div>
+					<h5 class="subtitle">taxable <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns true if taxes are charged on the line item's variant, or false if they are not.</p>
+					</div>
+					<h5 class="subtitle">successfully_fulfilled_quantity <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the successfully fulfilled quantity of the line item.</p>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of the line item. line_item.title combines both the line item's product.title and the line item's variant.title, separated by a hyphen.</p>
+					</div>
+					<h5 class="subtitle">total_discount <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the total amount of all discounts applied to the line item. Only has a value if you are using the Script Editor app.</p>
+					</div>
+					<h5 class="subtitle">url <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the relative URL of the line item's variant. The relative URL does not include your store's root URL (mystore.myshopify.com).</p>
+					</div>
+					<h5 class="subtitle">variant <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the variant of the line item.</p>
+					</div>
+					<h5 class="subtitle">variant_id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the ID of the line item's variant.</p>
+					</div>
+					<h5 class="subtitle">vendor <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the vendor of the line item's product.</p>
+					</div>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the ID of the line item, which is a unique ID generated for the cart.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Tax Line <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">title</h5>
-					<h5 class="subtitle">price</h5>
-					<h5 class="subtitle">rate</h5>
-					<h5 class="subtitle">rate_percentage</h5>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of the tax.</p>
+					</div>
+					<h5 class="subtitle">price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the amount of the tax. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">rate <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the rate of the tax in decimal notation.</p>
+					</div>
+					<h5 class="subtitle">rate_percentage <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the rate of the tax in percentage format.</p>
+					</div>
 				</div>
 
 				<h4 class="subtitle">Transaction <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">id</h5>
-					<h5 class="subtitle">amount</h5>
-					<h5 class="subtitle">name</h5>
-					<h5 class="subtitle">status</h5>
-					<h5 class="subtitle">status_label</h5>
-					<h5 class="subtitle">create_at</h5>
-					<h5 class="subtitle">receipt</h5>
-					<h5 class="subtitle">kind</h5>
-					<h5 class="subtitle">gateway</h5>
-					<h5 class="subtitle">payment_details</h5>
+					<h5 class="subtitle">id <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns a unique numeric identifier for the transaction.</p>
+					</div>
+					<h5 class="subtitle">amount <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the amount of the transaction. Use one of the money filters to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">name <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the transaction.</p>
+					</div>
+					<h5 class="subtitle">status <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the status of the transaction.</p>
+					</div>
+					<h5 class="subtitle">status_label <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the translated output of a transaction's status.</p>
+					</div>
+					<h5 class="subtitle">create_at <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the timestamp of when the transaction was created. Use the date filter to format the timestamp.</p>
+					</div>
+					<h5 class="subtitle">receipt <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns text with information from the payment gateway about the payment receipt. This includes whether the payment was a test case and an authorization code if one was included in the transaction.</p>
+					</div>
+					<h5 class="subtitle">kind <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p></p>
+					</div>
+					<h5 class="subtitle">gateway <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the type of transaction. There are five transaction types:</p>
+						<ul>
+							<li><strong>authorization: </strong>is the reserving of money that the customer has agreed to pay.</li>
+							<li><strong>capture: </strong>is the transfer of the money that was reserved during the authorization stage.</li>
+							<li><strong>sale: </strong>is a combination of authorization and capture, performed in one step.</li>
+							<li><strong>void: </strong>is the cancellation of a pending authorization or capture.</li>
+							<li><strong>refund: </strong> is the partial or full refund of the captured money to the customer.</li>
+						</ul>
+					</div>
+					<h5 class="subtitle">gateway <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the name of the payment gateway used for the transaction.</p>
+					</div>
+					<h5 class="subtitle">payment_details <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>The payment_details object contains additional properties related to the payment method used in the transaction.</p>
+					</div>
 				</div>
 				<h4 class="subtitle">Shipping Method <span class="arrow arrow-close">►</span></h4>
 				<div class="content hide">
-					<h5 class="subtitle">handle</h5>
-					<h5 class="subtitle">price</h5>
-					<h5 class="subtitle">title</h5>
+					<h5 class="subtitle">handle <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the handle of the shipping method. The price of the shipping rate is appended to the end of the handle.</p>
+					</div>
+					<h5 class="subtitle">price <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the price of the shipping method. Use a money filter to return the value in a monetary format.</p>
+					</div>
+					<h5 class="subtitle">title <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>Returns the title of the shipping method.</p>
+					</div>
+				</div>
+				<h4 class="subtitle">Country option tags <span class="arrow arrow-close">►</span></h4>
+				<div class="content hide">
+					<h5 class="subtitle">country_option_tags <span class="arrow arrow-close">►</span></h5>
+					<div class="content hide">
+						<p>country_option_tags creates an 'option' tag for each country. An attribute named data-provinces is set for each country, containing JSON-encoded arrays of the country's respective subregions. If a country does not have any subregions, an empty array is set for its data-provinces attribute.</p>
+						<p>country_option_tags must be wrapped in 'select' HTML tags.</p>
+					</div>
 				</div>
 			<hr>
 			</div>
 
-			<h4 class="subtitle">Country option tags <span class="arrow arrow-close">►</span></h4>
-			<div class="content hide">
-				<h5 class="subtitle">country_option_tags</h5>
-			</div>
-			<h4 class="subtitle">Current Tags <span class="arrow arrow-close">►</span></h4>
-			<div class="content hide">
-				<h5 class="subtitle">current_tags</h5>
-			</div>
 
 
 			<h4 class="subtitle">forloop <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">first</h5>
-				<h5 class="subtitle">index</h5>
-				<h5 class="subtitle">index()</h5>
-				<h5 class="subtitle">last</h5>
-				<h5 class="subtitle">rindex</h5>
-				<h5 class="subtitle">rindex()</h5>
-				<h5 class="subtitle">length</h5>
+				<p>The forloop object contains attributes of its parent for loop.</p>
+				<h5 class="subtitle">first <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns true if it's the first iteration of the for loop. Returns false if it is not the first iteration.</p>
+				</div> 
+				<h5 class="subtitle">index <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns the current index of the for loop, starting at 1.</p>
+				</div>       
+				<h5 class="subtitle">index0 <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns the current index of the for loop, starting at 0.</p>
+				</div>
+				<h5 class="subtitle">last <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns true if it's the last iteration of the for loop. Returns false if it is not the last iteration.</p>
+				</div>
+				<h5 class="subtitle">length <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns the number of iterations of the loop.</p>
+				</div>
+				<h5 class="subtitle">rindex <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns forloop.index in reverse order.</p>
+				</div>
+				<h5 class="subtitle">rindex0 <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns forloop.index0 in reverse order.</p>
+				</div>
 			</div>
-
-
-
-
-
-
-
 
 			<h4 class="subtitle">Tablerow <span class="arrow arrow-close">►</span></h4>
 			<div class="content hide">
-				<h5 class="subtitle">length</h5>
-				<h5 class="subtitle">index</h5>
-				<h5 class="subtitle">index()</h5>
-				<h5 class="subtitle">rindex</h5>
-				<h5 class="subtitle">rindex()</h5>
-				<h5 class="subtitle">first</h5>
-				<h5 class="subtitle">last</h5>
-				<h5 class="subtitle">col</h5>
-				<h5 class="subtitle">col()</h5>
-				<h5 class="subtitle">col_first</h5>
-				<h5 class="subtitle">col_last</h5>
+				<p>The tablerow object is used within the tablerow tag. It contains attributes of its parent for loop.</p>
+				<h5 class="subtitle">length <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns the number of iterations of the tablerow loop.</p>
+				</div>
+				<h5 class="subtitle">index <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns the current index of the tablerow loop, starting at 1.</p>
+				</div>
+				<h5 class="subtitle">index0 <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns the current index of the tablerow loop, starting at 0.</p>
+				</div>
+				<h5 class="subtitle">rindex <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns tablerow.index in reverse order.</p>
+				</div>
+				<h5 class="subtitle">rindex0 <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns tablerow.index0 in reverse order.</p>
+				</div>
+				<h5 class="subtitle">first <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns true if it's the first iteration of the tablerow loop. Returns false if it is not the first iteration.</p>
+				</div>
+				<h5 class="subtitle">last <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns true if it's the last iteration of the tablerow loop. Returns false if it is not the last iteration.</p>
+				</div>
+				<h5 class="subtitle">col <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns the index of the current row, starting at 1.</p>
+				</div>
+				<h5 class="subtitle">col0 <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns the index of the current row, starting at 0.</p>
+				</div>
+				<h5 class="subtitle">col_first <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns true if the current column is the first column in a row, returns false if it is not.</p>
+				</div>
+				<h5 class="subtitle">col_last <span class="arrow arrow-close">►</span></h5>
+				<div class="content hide">
+					<p>Returns true if the current column is the last column in a row, returns false if it is not.</p>
+				</div>
 			</div>
 
 
